@@ -6,7 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import welcomeImage from "../../public/image.png";
-import FAQs from "../components/FAQs";
+// import FAQs from "../components/FAQs";
 // import FeatureCard from "../components/Feature";
 // import Footer from "../components/Footer";
 // import HowItWorks from "../components/HowItWorks";
