@@ -8,7 +8,12 @@ const Loader = ({ isLoading }) => {
       <div className="fixed inset-0 flex items-center justify-center z-50 overflow-y-auto overflow-x-hidden">
         <div className="relative ">
           <div className="relative">
-            <Image src={"/loading.gif"} height={60} width={60} />
+            <Image
+              src={"/loading.gif"}
+              alt="loading.gif"
+              height={60}
+              width={60}
+            />
           </div>
         </div>
       </div>

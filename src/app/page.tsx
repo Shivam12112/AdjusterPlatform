@@ -1,23 +1,45 @@
 "use client";
 
+import { appName } from "@/lib/variables";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import welcomeImage from "../../public/image.png";
-import FeatureCard from "../components/Feature";
-import ThankYouModal from "../components/ThankYouModal";
-import WaitlistModal from "../components/WaitlistModal";
-import Loader from "../components/Loader";
-import Footer from "../components/Footer";
-import HowItWorks from "../components/HowItWorks";
-import NavBar from "../components/NavBar";
-import FAQs from "../components/FAQs";
+// import FAQs from "../components/FAQs";
+// import FeatureCard from "../components/Feature";
+// import Footer from "../components/Footer";
+// import HowItWorks from "../components/HowItWorks";
+// import Loader from "../components/Loader";
+// import NavBar from "../components/NavBar";
+// import ThankYouModal from "../components/ThankYouModal";
+// import WaitlistModal from "../components/WaitlistModal";
 import styles from "../styles/Home.module.css";
-import { Inter } from "next/font/google";
-import { appName } from "@/lib/variables";
 
-// import inter
-const inter = Inter({ subsets: ["latin"] });
+const NavBar = dynamic(() => import("../components/NavBar"), {
+  ssr: false,
+});
+const Loader = dynamic(() => import("../components/Loader"), {
+  ssr: false,
+});
+const HowItWorks = dynamic(() => import("../components/HowItWorks"), {
+  ssr: false,
+});
+const Footer = dynamic(() => import("../components/Footer"), {
+  ssr: false,
+});
+const FeatureCard = dynamic(() => import("../components/Feature"), {
+  ssr: false,
+});
+const FAQs = dynamic(() => import("../components/FAQs"), {
+  ssr: false,
+});
+const ThankYouModal = dynamic(() => import("../components/ThankYouModal"), {
+  ssr: false,
+});
+const WaitlistModal = dynamic(() => import("../components/WaitlistModal"), {
+  ssr: false,
+});
 
 const Home = () => {
   const [email, setEmail] = useState<string>("");
