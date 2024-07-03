@@ -31,13 +31,14 @@ const Footer = dynamic(() => import("../components/Footer"), {
 const FeatureCard = dynamic(() => import("../components/Feature"), {
   ssr: false,
 });
-const FAQs = dynamic(() => import("../components/FAQs"), {
-  ssr: false,
-});
+
 const ThankYouModal = dynamic(() => import("../components/ThankYouModal"), {
   ssr: false,
 });
 const WaitlistModal = dynamic(() => import("../components/WaitlistModal"), {
+  ssr: false,
+});
+const FAQs = dynamic(() => import("../components/FAQs"), {
   ssr: false,
 });
 
