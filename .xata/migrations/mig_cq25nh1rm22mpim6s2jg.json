@@ -1,0 +1,22 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cq25nh1rm22mpim6s2jg",
+    "operations": [
+      {
+        "alter_column": {
+          "up": "(SELECT CASE WHEN \"email\" IS NULL THEN '' ELSE \"email\" END)",
+          "down": "(SELECT CASE WHEN \"email\" IS NULL THEN '' ELSE \"email\" END)",
+          "table": "wait-list",
+          "column": "email",
+          "nullable": false
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cq25nh1rm22mpim6s2jg",
+  "parent": "mig_cq25nd1rm22mpim6s2ig",
+  "schema": "public",
+  "startedAt": "2024-07-02T19:57:57.402603Z"
+}

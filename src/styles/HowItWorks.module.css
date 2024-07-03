@@ -1,0 +1,50 @@
+/* styles/HowItWorks.module.css */
+
+.container2 {
+    padding: 20px;
+    /* max-width: 900px; */
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    color: #3366cc;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+  
+  .content {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    justify-content: space-between;
+
+
+  }
+  
+  .images {
+    flex: 1;
+  }
+  
+  .steps {
+    flex: 1;
+  }
+  
+  .step {
+    margin-bottom: 40px;
+  }
+  
+  .stepTitle {
+    color: #3366cc;
+    font-size: 1.5em;
+  }
+  
+  .stepDescription {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  

@@ -1,0 +1,163 @@
+/* styles/Home.module.css */
+.container {
+  width: 100%;
+  padding: 0 5rem;
+  /* background-color: #DCE0E1; */
+}
+
+.header {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 5rem;
+  /* background-color: "black"; */
+  /* position: fixed; */
+}
+
+.svg-icon-color{
+  color: green;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navLinks a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: rgb(var(--foreground-rgb));
+}
+
+.ctaButton {
+  background: #0070f3;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.heroText {
+  max-width: 50%;
+}
+
+.heroText h1 {
+  font-size: 3rem;
+}
+
+.heroText p {
+  margin: 1rem 0;
+}
+
+.waitlistText {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+
+}
+
+.waitlistForm {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.waitlistForm input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.waitlistForm button {
+  padding: 0.5rem 1rem;
+  background: #0070f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.partners {
+  text-align: center;
+  margin-top: 2rem;
+
+}
+
+.partners h3 {
+  color: #0070F3;
+  font-size: 1.5rem;
+
+}
+
+.partnerLogos {
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.partnerLogos img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.features {
+  background: #f9f9f9;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.fetaureHeading {
+  margin-bottom: 2rem;
+  color: #0070F3;
+  font-size: 1.5rem;
+}
+
+.featureList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature {
+  /* max-width: 50%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.feature h3 {
+  font-weight: 800;
+}
+
+.suggestFeatureButton {
+  margin-top: 2rem;
+  background: #0070f3;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.howItWorks {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.howItWorksSteps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.step {
+  max-width: 20%;
+}

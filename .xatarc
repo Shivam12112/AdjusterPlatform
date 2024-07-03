@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Shivam-Kushwaha-s-workspace-8en9na.us-east-1.xata.sh/db/wait-list",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

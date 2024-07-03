@@ -1,0 +1,19 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cq2i2eha3fbpbkc8s120",
+    "operations": [
+      {
+        "rename_table": {
+          "to": "waitlist",
+          "from": "wait-list"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cq2i2eha3fbpbkc8s120",
+  "parent": "mig_cq25nh1rm22mpim6s2jg",
+  "schema": "public",
+  "startedAt": "2024-07-03T10:00:27.37191Z"
+}

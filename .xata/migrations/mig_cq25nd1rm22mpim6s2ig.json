@@ -1,0 +1,30 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cq25nd1rm22mpim6s2ig",
+    "operations": [
+      {
+        "add_column": {
+          "table": "wait-list",
+          "column": {
+            "pk": false,
+            "name": "email",
+            "type": "text",
+            "check": {
+              "name": "wait-list_xata_email_length_email",
+              "constraint": "LENGTH(\"email\") <= 2048"
+            },
+            "unique": true,
+            "comment": "{\"xata.type\":\"email\"}",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cq25nd1rm22mpim6s2ig",
+  "parent": "mig_cq25muprm22mpim6s2hg",
+  "schema": "public",
+  "startedAt": "2024-07-02T19:57:41.302303Z"
+}

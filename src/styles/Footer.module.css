@@ -1,0 +1,105 @@
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 4rem;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+  
+  .description {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .form {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #0070f3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .terms {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 1rem;
+  }
+  
+  .storeLinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .storeLink {
+    height: 50px;
+    margin: 0 0.5rem;
+  }
+  
+  .comingSoon {
+    font-size: 1rem;
+    color: #0070f3;
+    margin-top: 1rem;
+  }
+  
+  .footer {
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .nav a {
+    font-size: 0.875rem;
+    color: #0070f3;
+    text-decoration: none;
+  }
+  

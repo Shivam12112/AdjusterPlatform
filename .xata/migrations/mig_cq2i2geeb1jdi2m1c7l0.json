@@ -1,0 +1,20 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cq2i2geeb1jdi2m1c7l0",
+    "operations": [
+      {
+        "rename_constraint": {
+          "to": "waitlist_xata_email_length_email",
+          "from": "wait-list_xata_email_length_email",
+          "table": "waitlist"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cq2i2geeb1jdi2m1c7l0",
+  "parent": "mig_cq2i2eha3fbpbkc8s120",
+  "schema": "public",
+  "startedAt": "2024-07-03T10:00:33.240576Z"
+}
