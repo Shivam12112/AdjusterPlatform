@@ -25,8 +25,8 @@ const HowItWorks = () => {
           <div className={styles.step}>
             <h2 className={styles.stepTitle}>Setup and Customization</h2>
             <p className={styles.stepDescription}>
-              Start by setting up your {appName} account. Customize workflows
-              to align with the specific requirements of different insurance
+              Start by setting up your {appName} account. Customize workflows to
+              align with the specific requirements of different insurance
               carriers and lines of business (LoB). Tailor questionnaires and
               site survey templates to ensure all necessary information is
               captured.
@@ -35,7 +35,7 @@ const HowItWorks = () => {
           <div className={styles.step}>
             <h2 className={styles.stepTitle}>AI-Driven Analysis</h2>
             <p className={styles.stepDescription}>
-              Once your survey data is uploaded, {appName}'s AI engine
+              Once your survey data is uploaded, {appName}&apos;s AI engine
               processes the information. It automatically recognizes items in
               your photos and annotates damages, reducing the need for manual
               input and minimizing errors.
@@ -45,7 +45,7 @@ const HowItWorks = () => {
             <h2 className={styles.stepTitle}>Review and Approval</h2>
             <p className={styles.stepDescription}>
               Review the AI-generated annotations and add any additional
-              observations. {appName}'s intuitive interface allows for quick
+              observations. {appName}&apos;s intuitive interface allows for quick
               edits and approvals, ensuring all information is accurate and
               complete before finalizing the report.
             </p>
@@ -60,7 +60,6 @@ const HowItWorks = () => {
               claim.
             </p>
           </div>
-          
         </div>
       </div>
     </section>

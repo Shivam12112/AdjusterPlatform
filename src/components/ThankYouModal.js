@@ -48,8 +48,8 @@ const ThankYouModal = ({ isShown, setIsShown }) => {
               </h3>
               <p>
                 Thank you for signing up to join the ClaimCloud waitlist. We are
-                thrilled to have you on board and can't wait to show you how
-                ClaimCloud will transform your claims process.
+                thrilled to have you on board and can&apos;t wait to show you
+                how ClaimCloud will transform your claims process.
               </p>
             </div>
           </div>

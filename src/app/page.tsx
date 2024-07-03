@@ -112,7 +112,7 @@ const Home = () => {
       icon: "/computer-report-icon.svg",
       title: "Customizable Consolidated Reports",
       description:
-        "Generate comprehensive, customized reports tailored to each insurance carrier's requirements. Present your findings clearly and professionally to enhance communication and decision-making.",
+        "Generate comprehensive, customized reports tailored to each insurance carriers requirements. Present your findings clearly and professionally to enhance communication and decision-making.",
     },
     {
       icon: "/padlock-black-icon.svg",
