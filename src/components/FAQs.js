@@ -128,7 +128,7 @@ const FAQs = () => {
 
   return (
     <>
-      <div className={styles.main}>
+      <div className={styles.main} id="faqs">
         <h1>Frequently asked questions...</h1>
         <p>Explore answers to commonly raised inquiries about CloudClaim</p>
       </div>

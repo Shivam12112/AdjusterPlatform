@@ -44,16 +44,23 @@ const FAQs = dynamic(() => import("../components/FAQs"), {
 
 const Home = () => {
   const [email, setEmail] = useState<string>("");
-  const [isShown, setIsShown] = useState<boolean>(false);
+  const [showThankYouModal, setShowhankYouModal] = useState<boolean>(false);
+  const [showErrorModal, setShowErrorModal] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isWaitListModal, setIsWaitListModal] = useState<boolean>(false);
 
   const handleAddToWitList = async (payload: any) => {
     if (!payload) return;
-    const allData = await fetchAllData();
-    console.log("allDataallDataallDataallDataallData", allData.records);
-    setIsLoading(true);
     try {
+      setIsLoading(true);
+      const allData = await fetchAllData();
+      const isExisting = allData.records.filter(
+        (item: any) => item.email === email
+      );
+      if (isExisting.length > 0) {
+        setIsLoading(false);
+        setShowErrorModal(true);
+      }
       const response = await fetch("/api/waitListApi", {
         method: "POST",
         headers: {
@@ -66,7 +73,7 @@ const Home = () => {
         throw new Error("Network response was not ok");
       }
       const result = await response.json();
-      setIsShown(true);
+      setShowhankYouModal(true);
       setIsLoading(false);
       setEmail("");
       console.log("Data posted successfully:", result);
@@ -137,7 +144,20 @@ const Home = () => {
   return (
     <>
       <NavBar />
-      <ThankYouModal isShown={isShown} setIsShown={setIsShown} />
+      <ThankYouModal
+        isShown={showThankYouModal}
+        setIsShown={setShowhankYouModal}
+        title={`Welcome to the ${appName} Revolution!`}
+        thanqYouModal={true}
+        description={`Thank you for signing up to join the ${appName} waitlist. We are thrilled to have you on board and can't wait to show you how ${appName} will transform your claims process.`}
+      />
+      <ThankYouModal
+        isShown={showErrorModal}
+        thanqYouModal={false}
+        setIsShown={setShowErrorModal}
+        title="You have already signed up"
+        description={`Thank you for your continued interest in ${appName}. You are already on our waitlist, and we are thrilled to have you on board. We can't wait to show you how ${appName} will transform your claims process.`}
+      />
       <WaitlistModal
         isWaitListModal={isWaitListModal}
         setIsWaitListModal={setIsWaitListModal}
@@ -211,7 +231,7 @@ const Home = () => {
           <Head>
             <title>CloudClaim Features</title>
           </Head>
-          <main className="main-1">
+          <main className="main-1" id="features">
             <h1>How CloudClaim empowers you to accomplish more...</h1>
             <div className="features-grid">
               {features.map((feature, index) => (

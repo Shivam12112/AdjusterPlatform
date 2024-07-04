@@ -1,44 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const WaitlistModal = ({ isWaitListModal, setIsWaitListModal }) => {
   if (!isWaitListModal) return null;
   return (
-    <>
-      <div className="fixed inset-0 flex items-center justify-center z-50 overflow-y-auto overflow-x-hidden">
-        <div className="relative">
-          <div
-            className="relative bg-white rounded-md shadow dark:bg-gray-700"
-            style={{
-              backgroundColor: "white",
-            }}
+    <div className="fixed inset-0 flex items-center justify-center z-50 overflow-y-auto overflow-x-hidden bg-black bg-opacity-50">
+      <div className="relative w-w/2  p-4">
+        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <button
+            onClick={() => setIsWaitListModal(false)}
+            type="button"
+            className="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-hide="popup-modal"
           >
-            <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+            <svg
+              className="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span className="sr-only">Close modal</span>
+          </button>
+
+          <div className="p-4 md:p-5 ">
+            <div className=" md:p-5 text-center ">
               <h3 className="text-xl font-semibold text-black-900 dark:text-white">
                 Why Join WaitList!
               </h3>
-              <button
-                type="button"
-                onClick={() => setIsWaitListModal(false)}
-                className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                data-modal-hide="default-modal"
-              >
-                <svg
-                  className="w-3 h-3"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 14"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                  />
-                </svg>
-                <span className="sr-only">Close modal</span>
-              </button>
             </div>
             <div className="p-4 md:p-5 space-y-4">
               <ul className="space-y-2 text-gray-500 list-disc list-inside dark:text-gray-400">
@@ -91,7 +87,7 @@ const WaitlistModal = ({ isWaitListModal, setIsWaitListModal }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

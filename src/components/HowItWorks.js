@@ -6,7 +6,7 @@ import { appName } from "@/lib/variables";
 
 const HowItWorks = () => {
   return (
-    <section className="main-1">
+    <section className="main-1" id="how-it-works">
       <h1 className={styles.header}>How it works</h1>
       <p className={styles.description}>
         An app that makes sales recording easier, faster, and more reliable than
@@ -45,9 +45,9 @@ const HowItWorks = () => {
             <h2 className={styles.stepTitle}>Review and Approval</h2>
             <p className={styles.stepDescription}>
               Review the AI-generated annotations and add any additional
-              observations. {appName}&apos;s intuitive interface allows for quick
-              edits and approvals, ensuring all information is accurate and
-              complete before finalizing the report.
+              observations. {appName}&apos;s intuitive interface allows for
+              quick edits and approvals, ensuring all information is accurate
+              and complete before finalizing the report.
             </p>
           </div>
           <div className={styles.step}>
