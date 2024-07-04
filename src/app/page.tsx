@@ -142,7 +142,11 @@ const Home = () => {
   }
 
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: "#FFFAF0",
+      }}
+    >
       <NavBar />
       <ThankYouModal
         isShown={showThankYouModal}
@@ -221,69 +225,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* <div className={styles.hero}>
-          <div className={styles.heroText}>
-            <h1>Revolutionizing Claims Adjustments</h1>
-            <p>
-              {appName} is designed to streamline the work of claims adjusters,
-              enabling them to perform more inspections efficiently. With{" "}
-              {appName}, adjusters can sync inspections from multiple carriers,
-              schedule appointments seamlessly, upload photos to the cloud, and
-              write detailed scoping reports. Our app is crafted with the
-              singular goal of enhancing productivity and simplifying the
-              inspection process for adjusters.
-            </p>
-            <div>
-              <h2 className={styles.waitlistText}>Join the waitlist</h2>
-
-              <div className={styles.waitlistForm}>
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  onChange={handleValueChange}
-                  value={email}
-                  style={{
-                    border: "1px solid gray",
-                    width: "300px",
-                    marginRight: "1rem",
-                    borderRadius: 5,
-                  }}
-                />
-                <button
-                  style={{
-                    border: "1px solid gray",
-                    marginRight: "1rem",
-                    borderRadius: 5,
-                  }}
-                  onClick={onFormSubmit}
-                  type="submit"
-                >
-                  Join waitlist
-                </button>
-                <button
-                  style={{
-                    border: "1px solid gray",
-                    marginRight: "1rem",
-                    borderRadius: 5,
-                  }}
-                  onClick={() => setIsWaitListModal(true)}
-                  type="submit"
-                >
-                  Why Join the Waitlist?
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className={styles.heroImage}>
-            <Image
-              src={welcomeImage}
-              alt="CloudClaim App"
-              width={600}
-              height={700}
-            />
-          </div>
-        </div> */}
-
         <div id="features">
           <Head>
             <title>CloudClaim Features</title>
@@ -313,7 +254,7 @@ const Home = () => {
         <FAQs />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
