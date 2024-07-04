@@ -64,6 +64,7 @@ const DatabaseClient = buildClient();
 const defaultOptions = {
   databaseURL:
     "https://Shivam-Kushwaha-s-workspace-8en9na.us-east-1.xata.sh/db/wait-list",
+  apiKey: process.env.XATA_API_KEY,
 };
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {
