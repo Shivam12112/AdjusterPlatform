@@ -292,6 +292,10 @@ const Home = () => {
             <div className="text-4xl font-bold text-center mb-6">
               <h1>Key Features of {appName}</h1>
             </div>
+            <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
+              Empowering Insurance Adjusters with Advanced Tools and AI
+              Capabilities.
+            </p>
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
                 <FeatureCard

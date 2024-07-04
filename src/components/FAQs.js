@@ -87,8 +87,11 @@ const FAQs = () => {
     <section className="py-12 bg-gray-100 dark:bg-gray-900" id="faqs">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold">Frequently Asked Questions</h1>
-          <p className="text-gray-700 dark:text-gray-300">
+          <div className="text-4xl font-bold text-center mb-6">
+            <h1>Frequently Asked Questions</h1>
+          </div>
+
+          <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
             Explore answers to commonly raised inquiries about {appName}
           </p>
         </div>
