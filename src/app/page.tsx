@@ -129,6 +129,11 @@ const Home = () => {
     e.preventDefault();
     handleAddToWitList(email);
   };
+
+  if (typeof window === "undefined") {
+    return null; // Return null or a loader if you prefer
+  }
+
   return (
     <>
       <NavBar />
@@ -144,7 +149,7 @@ const Home = () => {
             <h1>Revolutionizing Claims Adjustments</h1>
             <p>
               {appName} is designed to streamline the work of claims adjusters,
-              enabling them to perform more inspections efficiently. With
+              enabling them to perform more inspections efficiently. With{" "}
               {appName}, adjusters can sync inspections from multiple carriers,
               schedule appointments seamlessly, upload photos to the cloud, and
               write detailed scoping reports. Our app is crafted with the
@@ -201,23 +206,6 @@ const Home = () => {
             />
           </div>
         </div>
-        {/* <div className={styles.partners}>
-          <h3>Our trusted partners</h3>
-          <div className={styles.partnerLogos}>
-            {ourPartners.map((partners, i) => {
-              return (
-                <Image
-                  key={i}
-                  src={partners.logo}
-                  alt="Vercel Logo"
-                  className="dark:invert"
-                  width={60}
-                  height={24}
-                />
-              );
-            })}
-          </div>
-        </div> */}
 
         <div>
           <Head>
@@ -237,108 +225,6 @@ const Home = () => {
             </div>
           </main>
         </div>
-
-        {/* <section id="features">
-          <div className={styles.features}>
-            <h1 className={styles.fetaureHeading}>How CloudClaim helps you do more…</h1>
-            <div className={styles.featureList}>
-              <div
-                className="grid grid-cols-3 gap-x-3 gap-y-1"
-                style={{
-                  // display: "flex",
-                  justifyContent: "center",
-                  textAlign: "center",
-                }}
-              >
-                <div className={styles.feature}>
-                  <Image
-                    src={"/insurance-protection-icon.svg"}
-                    className="py-4 svg-icon-color"
-                    alt="Vercel Logo"
-                    width={50}
-                    height={24}
-                  />
-                  <h3>Sync Claims</h3>
-                  <p>
-                    Sync claims and appointments to your devices in one tap.
-                  </p>
-                </div>
-                <div className={styles.feature}>
-                  <Image
-                    src={"/calendar-icon.svg"}
-                    className="py-4"
-                    alt="Vercel Logo"
-                    width={50}
-                    height={24}
-                  />
-                  <h3>Schedule Appointments</h3>
-                  <p>
-                    Schedule appointments with your customers while not
-                    conflicting with your personal agenda.
-                  </p>
-                </div>
-                <div className={styles.feature}>
-                  <Image
-                    src={"/calendar-icon.svg"}
-                    className="py-4"
-                    alt="Vercel Logo"
-                    width={50}
-                    height={24}
-                  />
-                  <h3>Schedule Appointments</h3>
-                  <p>
-                    Schedule appointments with your customers while not
-                    conflicting with your personal agenda.
-                  </p>
-                </div>
-                <div className={styles.feature}>
-                  <Image
-                    src={"/calendar-icon.svg"}
-                    className="py-4"
-                    alt="Vercel Logo"
-                    width={50}
-                    height={24}
-                  />
-                  <h3>Schedule Appointments</h3>
-                  <p>
-                    Schedule appointments with your customers while not
-                    conflicting with your personal agenda.
-                  </p>
-                </div>
-                <div className={styles.feature}>
-                  <Image
-                    src={"/analysis-icon.svg"}
-                    className="py-4"
-                    alt="Vercel Logo"
-                    width={50}
-                    height={24}
-                  />
-                  <h3>Build Scoping Reports</h3>
-                  <p>
-                    CloudClaim is great tool for building final scoping reports.
-                  </p>
-                </div>
-                <div className={styles.feature}>
-                  <Image
-                    src={"/repair-fix-repairing-icon.svg"}
-                    className="py-4"
-                    alt="Vercel Logo"
-                    width={50}
-                    height={24}
-                  />
-                  <h3>Easy setup</h3>
-                  <p>
-                    No need for a messy desktop, UPS, and printer. You now have
-                    it all in your palms.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <button className={styles.suggestFeatureButton}>
-              Suggest a feature
-            </button>
-          </div>
-        </section> */}
 
         <HowItWorks />
         <FAQs />
