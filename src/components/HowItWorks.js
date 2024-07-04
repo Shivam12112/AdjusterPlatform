@@ -7,8 +7,7 @@ const HowItWorks = () => {
     <section className="py-12 bg-gray-100" id="how-it-works">
       <h1 className="text-4xl font-bold text-center mb-6">How it works</h1>
       <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
-        An app that makes sales recording easier, faster, and more reliable than
-        a sales diary or notebook.
+        Effortless Claims Processing in Just a Few Steps.
       </p>
       <div className="flex flex-col lg:flex-row items-center lg:space-x-12 space-y-12 lg:space-y-0">
         <div className="flex-1 flex justify-center">

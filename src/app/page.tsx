@@ -288,8 +288,10 @@ const Home = () => {
           <Head>
             <title>CloudClaim Features</title>
           </Head>
-          <main className="main-1">
-            <h1>How CloudClaim empowers you to accomplish more...</h1>
+          <main className="">
+            <div className="text-4xl font-bold text-center mb-6">
+              <h1>Key Features of {appName}</h1>
+            </div>
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
                 <FeatureCard
