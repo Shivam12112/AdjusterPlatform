@@ -10,7 +10,12 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="fixed w-full top-0 border-b border-gray-200 bg-white dark:bg-blue-900 dark:border-gray-700">
+      <nav
+        style={{
+          backgroundColor: "#FFFAF0",
+        }}
+        className="fixed w-full top-0 border-b border-gray-300 dark:bg-blue-900 dark:border-gray-700"
+      >
         <div className="flex flex-wrap items-center justify-between p-4 lg:px-20">
           <a
             href="#"

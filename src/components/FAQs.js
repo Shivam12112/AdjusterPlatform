@@ -47,7 +47,7 @@ const FAQs = () => {
     return (
       <div
         key={index}
-        className="border-b border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl"
+        className="border-b bg-white border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl"
       >
         <h2 className="text-xl">
           <button
