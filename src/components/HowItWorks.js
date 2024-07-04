@@ -4,7 +4,7 @@ import { appName } from "@/lib/variables";
 
 const HowItWorks = () => {
   return (
-    <section className="py-12 bg-gray-100" id="how-it-works">
+    <section className="py-12" id="how-it-works">
       <h1 className="text-4xl font-bold text-center mb-6">How it works</h1>
       <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
         Effortless Claims Processing in Just a Few Steps.

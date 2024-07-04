@@ -47,13 +47,13 @@ const FAQs = () => {
     return (
       <div
         key={index}
-        className="border-b border-gray-200 dark:border-gray-700"
+        className="border-b border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl"
       >
         <h2 className="text-xl">
           <button
             type="button"
             onClick={() => onTitleClick(index)}
-            className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800"
+            className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400  dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800"
           >
             <span>{item.title}</span>
             <svg
@@ -84,10 +84,10 @@ const FAQs = () => {
   });
 
   return (
-    <section className="py-12 bg-gray-100 dark:bg-gray-900" id="faqs">
+    <section className="py-12 dark:bg-gray-900" id="faqs">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <div className="text-4xl font-bold text-center mb-6">
+          <div className="text-4xl font-bold text-center  mb-6">
             <h1>Frequently Asked Questions</h1>
           </div>
 
