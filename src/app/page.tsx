@@ -94,38 +94,38 @@ const Home = () => {
   const features = [
     {
       icon: "/insurance-protection-icon.svg",
-      title: "Tailored Workflows for Every Carrier and Claim Type",
+      title: "Tailored Workflows",
       description:
-        "Create and manage specific workflows customized to each insurance carrier and line of business (LoB). Streamline your process and ensure consistency across all claims.",
+        "Create and manage workflows customized for each insurance carrier and line of business, ensuring consistency across all claims.",
     },
     {
       icon: "/check-list-icon.svg",
-      title: "Comprehensive Questionnaire and Site Survey Tools",
+      title: "Questionnaire and Site Survey Tools",
       description:
-        "Design detailed questionnaires and conduct thorough site surveys using our offline-first mobile app. Capture all necessary information accurately, even without an internet connection.",
+        "Design detailed questionnaires and conduct thorough site surveys with our offline-first mobile app, capturing all necessary information accurately without an internet connection.",
     },
     {
       icon: "/process.svg",
       title: "Enhanced Review Process",
       description:
-        "Utilize our mobile app to perform in-depth reviews and improve your Turnaround Time (TAT) for processing claims. Handle more claims efficiently with thorough and streamlined procedures.",
+        "Use our mobile app to perform in-depth reviews and improve Turnaround Time (TAT) for processing claims, handling more claims efficiently.",
     },
     {
       icon: "/analysis-icon.svg",
-      title: "AI-Powered Item Recognition and Damage Annotation",
+      title: "AI-Powered Annotation",
       description:
-        "Leverage the power of AI to automatically recognize items in surveys and annotate observed damages. Save time and reduce manual errors with intelligent automation.",
+        "Automatically recognize items and annotate damages using AI, saving time and reducing manual errors.",
     },
     {
       icon: "/computer-report-icon.svg",
-      title: "Customizable Consolidated Reports",
+      title: "Customizable Reports",
       description:
-        "Generate comprehensive, customized reports tailored to each insurance carriers requirements. Present your findings clearly and professionally to enhance communication and decision-making.",
+        "Generate comprehensive, tailored reports for each insurance carrier, presenting findings clearly and professionally.",
     },
     {
       icon: "/padlock-black-icon.svg",
-      title: "Industry-Leading Security Standards",
-      description: `${appName} adheres to top OWASP security standards and employs best-in-class security practices. Ensure your data is protected with robust, enterprise-grade security measures.`,
+      title: "Industry-Leading Security",
+      description: `Adhere to top OWASP security standards and best-in-class security practices to protect your data with robust, enterprise-grade measures.`,
     },
   ];
   const handleValueChange = (e: any) => {
@@ -163,8 +163,65 @@ const Home = () => {
         setIsWaitListModal={setIsWaitListModal}
       />
       <Loader isLoading={isLoading} />
-      <div className={styles.container}>
-        <div className={styles.hero}>
+      <div
+        className={styles.container}
+        style={{
+          marginTop: "5rem",
+        }}
+      >
+        <div className="container mx-auto px-4 mt-20">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8">
+            <div className="flex-1">
+              <Image
+                src={welcomeImage}
+                alt="CloudClaim App"
+                className="w-full h-auto"
+                height={0}
+                width={0}
+              />
+            </div>
+            <div className="flex-1 text-center lg:text-left mb-8 lg:mb-0">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-4">
+                Revolutionizing Claims Adjustments
+              </h1>
+              <p className="text-lg lg:text-xl mb-8">
+                ClaimCloud is designed to streamline the work of claims
+                adjusters, enabling them to perform more inspections
+                efficiently. With ClaimCloud, adjusters can sync inspections
+                from multiple carriers, schedule appointments seamlessly, upload
+                photos to the cloud, and write detailed scoping reports. Our app
+                is crafted with the singular goal of enhancing productivity and
+                simplifying the inspection process for adjusters.
+              </p>
+              <h2 className="text-2xl font-semibold mb-4">Join the waitlist</h2>
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  onChange={handleValueChange}
+                  value={email}
+                  className="border border-gray-400  p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
+                />
+                <button
+                  onClick={onFormSubmit}
+                  type="submit"
+                  className="border border-gray-400 bg-blue-500 text-white p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
+                >
+                  Join waitlist
+                </button>
+                <button
+                  onClick={() => setIsWaitListModal(true)}
+                  type="submit"
+                  className="border border-gray-400 bg-blue-500 text-white p-2 rounded w-full sm:w-auto"
+                >
+                  Why Join the Waitlist?
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className={styles.hero}>
           <div className={styles.heroText}>
             <h1>Revolutionizing Claims Adjustments</h1>
             <p>
@@ -225,15 +282,15 @@ const Home = () => {
               height={700}
             />
           </div>
-        </div>
+        </div> */}
 
-        <div>
+        <div id="features">
           <Head>
             <title>CloudClaim Features</title>
           </Head>
-          <main className="main-1" id="features">
+          <main className="main-1">
             <h1>How CloudClaim empowers you to accomplish more...</h1>
-            <div className="features-grid">
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
                 <FeatureCard
                   key={index}

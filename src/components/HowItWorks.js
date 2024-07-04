@@ -1,30 +1,31 @@
-// pages/how-it-works.js
 import Image from "next/image";
-import styles from "../styles/HowItWorks.module.css"; // You can create and customize CSS here
 import welcomeImage from "../../public/welcome.png";
 import { appName } from "@/lib/variables";
 
 const HowItWorks = () => {
   return (
-    <section className="main-1" id="how-it-works">
-      <h1 className={styles.header}>How it works</h1>
-      <p className={styles.description}>
+    <section className="py-12 bg-gray-100" id="how-it-works">
+      <h1 className="text-4xl font-bold text-center mb-6">How it works</h1>
+      <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
         An app that makes sales recording easier, faster, and more reliable than
         a sales diary or notebook.
       </p>
-      <div className={styles.content}>
-        <div className={styles.images}>
+      <div className="flex flex-col lg:flex-row items-center lg:space-x-12 space-y-12 lg:space-y-0">
+        <div className="flex-1 flex justify-center">
           <Image
-            src={welcomeImage} // Make sure the image is in the public folder
+            src={welcomeImage}
             alt="How it works steps"
-            width={500} // Adjust the width accordingly
-            height={500} // Adjust the height accordingly
+            width={500}
+            height={500}
+            className="w-full max-w-md"
           />
         </div>
-        <div className={styles.steps}>
-          <div className={styles.step}>
-            <h2 className={styles.stepTitle}>Setup and Customization</h2>
-            <p className={styles.stepDescription}>
+        <div className="flex-1 space-y-8">
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              Setup and Customization
+            </h2>
+            <p className="text-gray-700">
               Start by setting up your {appName} account. Customize workflows to
               align with the specific requirements of different insurance
               carriers and lines of business (LoB). Tailor questionnaires and
@@ -32,27 +33,29 @@ const HowItWorks = () => {
               captured.
             </p>
           </div>
-          <div className={styles.step}>
-            <h2 className={styles.stepTitle}>AI-Driven Analysis</h2>
-            <p className={styles.stepDescription}>
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">AI-Driven Analysis</h2>
+            <p className="text-gray-700">
               Once your survey data is uploaded, {appName}&apos;s AI engine
               processes the information. It automatically recognizes items in
               your photos and annotates damages, reducing the need for manual
               input and minimizing errors.
             </p>
           </div>
-          <div className={styles.step}>
-            <h2 className={styles.stepTitle}>Review and Approval</h2>
-            <p className={styles.stepDescription}>
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">Review and Approval</h2>
+            <p className="text-gray-700">
               Review the AI-generated annotations and add any additional
               observations. {appName}&apos;s intuitive interface allows for
               quick edits and approvals, ensuring all information is accurate
               and complete before finalizing the report.
             </p>
           </div>
-          <div className={styles.step}>
-            <h2 className={styles.stepTitle}>Generate Custom Reports</h2>
-            <p className={styles.stepDescription}>
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">
+              Generate Custom Reports
+            </h2>
+            <p className="text-gray-700">
               Create comprehensive, customizable reports that meet the specific
               needs of each insurance carrier. Include detailed findings,
               annotated images, and any additional notes. Our flexible reporting
