@@ -53,6 +53,9 @@ const FAQs = () => {
           <button
             type="button"
             onClick={() => onTitleClick(index)}
+            style={{
+              backgroundColor: activeIndex === index ? "#E1EAFE" : "",
+            }}
             className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400  dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800"
           >
             <span>{item.title}</span>

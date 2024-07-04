@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {
+  Bona_Nova,
+  Joan,
+  Poppins,
+  Roboto_Slab,
+  WindSong
+} from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto_Slab({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Adjuster-Platform",
@@ -16,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

@@ -17,8 +17,9 @@
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: #FFFAF0
+  background: #FFFAF0;
 }
 
 @layer utilities {

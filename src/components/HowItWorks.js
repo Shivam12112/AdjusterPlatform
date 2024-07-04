@@ -14,12 +14,11 @@ const HowItWorks = () => {
           <Image
             src={welcomeImage}
             alt="How it works steps"
-            width={500}
-            height={500}
-            className="w-full max-w-md"
+            width={0}
+            height={0}
           />
         </div>
-        <div className="flex-1 space-y-8">
+        <div className="flex-1 space-y-8 text-center sm:text-left">
           <div>
             <h2 className="text-2xl font-semibold mb-2">
               Setup and Customization

@@ -5,7 +5,12 @@ const WaitlistModal = ({ isWaitListModal, setIsWaitListModal }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 overflow-y-auto overflow-x-hidden bg-black bg-opacity-50">
       <div className="relative w-w/2  p-4">
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div
+          className="relative rounded-lg shadow dark:bg-gray-700"
+          style={{
+            backgroundColor: "#FFFAF0",
+          }}
+        >
           <button
             onClick={() => setIsWaitListModal(false)}
             type="button"
@@ -37,7 +42,7 @@ const WaitlistModal = ({ isWaitListModal, setIsWaitListModal }) => {
               </h3>
             </div>
             <div className="p-4 md:p-5 space-y-4">
-              <ul className="space-y-2 text-gray-500 list-disc list-inside dark:text-gray-400">
+              <ul className="space-y-2 text-gray-900 list-disc list-inside dark:text-gray-400">
                 <li>
                   <span
                     style={{

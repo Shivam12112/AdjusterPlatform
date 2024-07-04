@@ -26,7 +26,12 @@ const ThankYouModal = ({
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 overflow-y-auto overflow-x-hidden bg-black bg-opacity-50">
       <div className="relative w-full max-w-md p-4">
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div
+          className="relative rounded-lg shadow dark:bg-gray-700"
+          style={{
+            backgroundColor: "#FFFAF0",
+          }}
+        >
           <button
             onClick={() => setIsShown(false)}
             type="button"
@@ -56,7 +61,7 @@ const ThankYouModal = ({
               {title}
             </h3>
             <p
-              className="mb-5 font-normal text-gray-700 dark:text-gray-300"
+              className="mb-5 font-normal text-gray-900 dark:text-gray-400"
               style={{
                 fontSize: 14,
               }}

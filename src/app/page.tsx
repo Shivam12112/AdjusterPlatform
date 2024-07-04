@@ -170,7 +170,7 @@ const Home = () => {
       <div
         className={styles.container}
         style={{
-          marginTop: "5rem",
+          marginTop: "8rem",
         }}
       >
         <div className="container mx-auto px-4 mt-20">
@@ -188,7 +188,7 @@ const Home = () => {
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">
                 Revolutionizing Claims Adjustments
               </h1>
-              <p className="text-lg lg:text-xl mb-8">
+              <p className="text-lg text-gray-600 lg:text-xl mb-8">
                 ClaimCloud is designed to streamline the work of claims
                 adjusters, enabling them to perform more inspections
                 efficiently. With ClaimCloud, adjusters can sync inspections
@@ -226,9 +226,6 @@ const Home = () => {
         </div>
 
         <div id="features">
-          <Head>
-            <title>CloudClaim Features</title>
-          </Head>
           <main className="">
             <div className="text-4xl font-bold text-center mb-6">
               <h1>Key Features of {appName}</h1>
