@@ -1,5 +1,5 @@
 import Image from "next/image";
-import welcomeImage from "../../public/welcome.png";
+import welcomeImage from "../../public/process.jpg";
 import { appName } from "@/lib/variables";
 
 const HowItWorks = () => {
@@ -16,6 +16,7 @@ const HowItWorks = () => {
             alt="How it works steps"
             width={0}
             height={0}
+            style={{borderRadius:4}}
           />
         </div>
         <div className="flex-1 space-y-8 text-center sm:text-left">
@@ -24,8 +25,8 @@ const HowItWorks = () => {
               Setup and Customization
             </h2>
             <p className="text-gray-700">
-              Start by setting up your {appName} account. Customize workflows to
-              align with the specific requirements of different insurance
+              Customize workflows to
+              align with the specific requirements of insurance
               carriers and lines of business (LoB). Tailor questionnaires and
               site survey templates to ensure all necessary information is
               captured.
@@ -34,7 +35,7 @@ const HowItWorks = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-2">AI-Driven Analysis</h2>
             <p className="text-gray-700">
-              Once your survey data is uploaded, {appName}&apos;s AI engine
+              As you capture photos and videos on site, {appName}&apos;s AI engine
               processes the information. It automatically recognizes items in
               your photos and annotates damages, reducing the need for manual
               input and minimizing errors.

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { appName } from "../lib/variables";
 
+import Accordion from './Accordion';
+import Button from "./Button";
+
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -98,7 +101,18 @@ const FAQs = () => {
             Explore answers to commonly raised inquiries about {appName}
           </p>
         </div>
-        <div className="space-y-4">{renderedItems}</div>
+
+        <div className="space-y-4">
+          {items.map((item, indx) => {
+            return (
+              <Accordion title={item.title}>
+                <p>{item.content}</p>
+              </Accordion>
+            )
+          })}
+        </div>
+
+       
       </div>
     </section>
   );

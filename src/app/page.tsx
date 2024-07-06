@@ -6,6 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import welcomeImage from "../../public/image.png";
+import landingimage from "../../public/landingimage.jpg"
 // import FAQs from "../components/FAQs";
 // import FeatureCard from "../components/Feature";
 // import Footer from "../components/Footer";
@@ -15,6 +16,9 @@ import welcomeImage from "../../public/image.png";
 // import ThankYouModal from "../components/ThankYouModal";
 // import WaitlistModal from "../components/WaitlistModal";
 import styles from "../styles/Home.module.css";
+import { EN_TEXT } from "@/lib/dictionaries/en";
+import Button from "@/components/Button";
+import Card from '../components/Card';
 
 const NavBar = dynamic(() => import("../components/NavBar"), {
   ssr: false,
@@ -177,27 +181,22 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8">
             <div className="flex-1">
               <Image
-                src={welcomeImage}
+                src={landingimage}
                 alt="CloudClaim App"
                 className="w-full h-auto"
                 height={0}
                 width={0}
+                style={{ borderRadius: 4}}
               />
             </div>
             <div className="flex-1 text-center lg:text-left mb-8 lg:mb-0">
-              <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                Revolutionizing Claims Adjustments
+              <h1 className="text-4xl lg:text-4xl font-bold mb-4">
+                {EN_TEXT.hero}
               </h1>
               <p className="text-lg text-gray-600 lg:text-xl mb-8">
-                ClaimCloud is designed to streamline the work of claims
-                adjusters, enabling them to perform more inspections
-                efficiently. With ClaimCloud, adjusters can sync inspections
-                from multiple carriers, schedule appointments seamlessly, upload
-                photos to the cloud, and write detailed scoping reports. Our app
-                is crafted with the singular goal of enhancing productivity and
-                simplifying the inspection process for adjusters.
+                {EN_TEXT.tagline}
               </p>
-              <h2 className="text-2xl font-semibold mb-4">Join the waitlist</h2>
+              <h2 className="text-md font-semibold mb-4">Join the Waitlist Today and Get Early Access with Exclusive Benefits!"</h2>
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center">
                 <input
                   type="email"
@@ -206,26 +205,31 @@ const Home = () => {
                   value={email}
                   className="border border-gray-400  p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
                 />
-                <button
-                  onClick={onFormSubmit}
+                {/* <button
+                  
                   type="submit"
-                  className="border border-gray-400 bg-blue-500 text-white p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
+                  className="border border-gray-400 bg-blue-500 text-white p-2 pr-8 pl-8 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
                 >
-                  Join waitlist
-                </button>
+                  
+                </button> */}
+
+                <Button onClick={onFormSubmit} >
+                Get Access!
+                </Button>
                 <button
                   onClick={() => setIsWaitListModal(true)}
                   type="submit"
-                  className="border border-gray-400 bg-blue-500 text-white p-2 rounded w-full sm:w-auto"
+
+                  className="bg-white-500 text-blue p-2 pr-4 pl-4 rounded w-full sm:w-auto text-sm"
                 >
-                  Why Join the Waitlist?
+                  Why join the waitlist?
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="features">
+        <div id="features" className="container mt-20 pt-5">
           <main className="">
             <div className="text-4xl font-bold text-center mb-6">
               <h1>Key Features of {appName}</h1>
@@ -244,6 +248,13 @@ const Home = () => {
                 />
               ))}
             </div>
+            {/* TODO: <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <Card 
+                title="Features"
+                content="Our platform offers customizable workflows, ML-driven annotations, and more."
+                icon={''}
+              />
+            </div> */}
           </main>
         </div>
 

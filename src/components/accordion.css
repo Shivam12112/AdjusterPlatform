@@ -1,0 +1,13 @@
+/* accordion.css */
+.accordion-content {
+    transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-content.max-h-0 {
+    max-height: 0;
+}
+
+.accordion-content.max-h-96 {
+    max-height: 24rem;
+    /* You can adjust this value based on your content's expected height */
+}
