@@ -65,7 +65,6 @@ const Home = () => {
       newValidationError.fullName = "Full name is required!";
     } else {
       newValidationError.fullName = "";
-      // delete newValidationError.fullName;
     }
 
     if (email.length === 0) {
@@ -166,10 +165,12 @@ const Home = () => {
   };
   const onFormSubmit = (e: any) => {
     e.preventDefault();
-    const validate = checkValidationError();
-    if (Object.keys(validate).length) {
-      console.log(validate);
-      setValidationError(validate);
+    const { fullName, email } = checkValidationError();
+    if (fullName.length !== 0 || email.length !== 0) {
+      setValidationError({
+        fullName: fullName,
+        email: email,
+      });
     } else {
       setValidationError({
         fullName: "",
