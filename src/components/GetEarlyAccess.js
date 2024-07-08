@@ -19,8 +19,8 @@ const GetEarlyAccess = ({
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
         <div className=" lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
           <div className="text-center">
-            <h1 className="title-font font-semibold text-3xl text-gray-900">
-              Why Join WaitList!
+            <h1 className="title-font font-semibold text-3xl text-gray-900 dark:text-gray-400">
+              Why Join WaitList?
             </h1>
           </div>
 
@@ -75,7 +75,7 @@ const GetEarlyAccess = ({
             </div>
           </div>
         </div>
-        <div className="lg:w-2/6 md:w-1/2 bg-floralwhite dark:bg-gray-950 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+        <div className="lg:w-2/6 md:w-1/2 bg-floralwhite dark:bg-gray-950 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
           <h2 className="text-gray-900 dark:text-gray-400 text-center text-lg font-bold title-font mb-5">
             Join Today!
           </h2>
@@ -88,7 +88,7 @@ const GetEarlyAccess = ({
               placeholder="Full Name"
               required
               value={fullName}
-              className="w-full bg-white rounded border border-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full sm:w-full bg-white rounded border border-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
             {validationError?.fullName && (
               <p className="text-red-500">{validationError?.fullName}</p>

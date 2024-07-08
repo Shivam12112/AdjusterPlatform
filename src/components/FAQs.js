@@ -90,7 +90,7 @@ const FAQs = () => {
   });
 
   return (
-    <section className="py-12 dark:bg-gray-900" id="faqs">
+    <section className="py-12 dark:bg-gray-950" id="faqs">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <div className="text-4xl font-bold text-center  mb-6">
