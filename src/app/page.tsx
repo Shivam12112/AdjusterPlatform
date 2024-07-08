@@ -6,7 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import welcomeImage from "../../public/image.png";
-import landingimage from "../../public/landingimage.jpg"
+import landingimage from "../../public/landingimage.jpg";
 // import FAQs from "../components/FAQs";
 // import FeatureCard from "../components/Feature";
 // import Footer from "../components/Footer";
@@ -18,7 +18,7 @@ import landingimage from "../../public/landingimage.jpg"
 import styles from "../styles/Home.module.css";
 import { EN_TEXT } from "@/lib/dictionaries/en";
 import Button from "@/components/Button";
-import Card from '../components/Card';
+import Card from "../components/Card";
 
 const NavBar = dynamic(() => import("../components/NavBar"), {
   ssr: false,
@@ -177,9 +177,9 @@ const Home = () => {
           marginTop: "8rem",
         }}
       >
-        <div className="container mx-auto px-4 mt-20">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8">
-            <div className="flex-1">
+        <div className="container justify-center mx-auto mt-20 ">
+          <div className="flex flex-col bg-red lg:flex-row items-center lg:items-start lg:space-x-8">
+            {/* <div className="flex-1">
               <Image
                 src={landingimage}
                 alt="CloudClaim App"
@@ -188,51 +188,46 @@ const Home = () => {
                 width={0}
                 style={{ borderRadius: 4}}
               />
-            </div>
-            <div className="flex-1 text-center lg:text-left mb-8 lg:mb-0">
-              <h1 className="text-4xl lg:text-4xl font-bold mb-4">
+            </div> */}
+            <div className="flex-1 flex-col items-center text-center justify-center lg:text-left mb-8 lg:mb-0">
+              <h1 className="text-5xl lg:text-4xl font-bold mb-4">
                 {EN_TEXT.hero}
               </h1>
               <p className="text-lg text-gray-600 lg:text-xl mb-8">
                 {EN_TEXT.tagline}
               </p>
-              <h2 className="text-md font-semibold mb-4">Join the Waitlist Today and Get Early Access with Exclusive Benefits!"</h2>
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  onChange={handleValueChange}
-                  value={email}
-                  className="border border-gray-400  p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
-                />
-                {/* <button
-                  
-                  type="submit"
-                  className="border border-gray-400 bg-blue-500 text-white p-2 pr-8 pl-8 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
-                >
-                  
-                </button> */}
 
-                <Button onClick={onFormSubmit} >
-                Get Access!
-                </Button>
-                <button
-                  onClick={() => setIsWaitListModal(true)}
-                  type="submit"
-
-                  className="bg-white-500 text-blue p-2 pr-4 pl-4 rounded w-full sm:w-auto text-sm"
-                >
-                  Why join the waitlist?
-                </button>
+              <div className="flex flex-col items-center">
+                <h2 className="text-md font-semibold mb-4">
+                  Join the Waitlist Today and Get Early Access with Exclusive
+                  Benefits!"
+                </h2>
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    onChange={handleValueChange}
+                    value={email}
+                    className="border border-gray-400  p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
+                  />
+                  <Button onClick={onFormSubmit}>Get Access!</Button>
+                  <button
+                    onClick={() => setIsWaitListModal(true)}
+                    type="submit"
+                    className="bg-white-500 text-blue p-2 pr-4 pl-4 rounded w-full sm:w-auto text-sm"
+                  >
+                    Why join the waitlist?
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="features" className="container mt-20 pt-5">
+        <div id="features" className="container mt-20 pt-3 " style={{marginTop: 180}}>
           <main className="">
-            <div className="text-4xl font-bold text-center mb-6">
-              <h1>Key Features of {appName}</h1>
+            <div className="text-3xl font-bold text-center mb-6">
+              <h1>Process 2x more claims  </h1>
             </div>
             <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
               Empowering Insurance Adjusters with Advanced Tools and AI
