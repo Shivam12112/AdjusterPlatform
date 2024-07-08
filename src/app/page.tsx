@@ -2,16 +2,19 @@
 
 import { appName } from "@/lib/variables";
 import dynamic from "next/dynamic";
-import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
-import welcomeImage from "../../public/image.png";
-import landingimage from "../../public/landingimage.jpg";
-import styles from "../styles/Home.module.css";
-import { EN_TEXT } from "@/lib/dictionaries/en";
+import landingImage from "../../public/landingimage.jpg";
+// import FAQs from "../components/FAQs";
+// import FeatureCard from "../components/Feature";
+// import Footer from "../components/Footer";
+// import HowItWorks from "../components/HowItWorks";
+// import Loader from "../components/Loader";
+// import NavBar from "../components/NavBar";
+// import ThankYouModal from "../components/ThankYouModal";
+// import WaitlistModal from "../components/WaitlistModal";
 import Button from "@/components/Button";
-import Card from "../components/Card";
-import ClaimTypePage from "../components/ClaimTypePage";
+import { EN_TEXT } from "@/lib/dictionaries/en";
+import styles from "../styles/Home.module.css";
 
 const NavBar = dynamic(() => import("../components/NavBar"), {
   ssr: false,
@@ -164,24 +167,58 @@ const Home = () => {
         setIsWaitListModal={setIsWaitListModal}
       />
       <Loader isLoading={isLoading} />
+
       <div
-        className={styles.container}
+        className="justify-center mx-0 mt-20 bg-cover bg-center"
         style={{
-          marginTop: "8rem",
+          backgroundImage: `url(${landingImage.src})`,
+          marginTop: "4rem",
+          // width: "100vw",
         }}
       >
-        <div className="container justify-center mx-auto mt-20 ">
+        <div
+          style={{
+            padding: "10rem 10rem 15rem 10rem",
+          }}
+          className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8 bg-gray-900 bg-opacity-70 rounded"
+        >
+          <div className="flex-1 flex-col items-center text-center justify-center lg:text-left mb-8 lg:mb-0">
+            <h1 className="text-5xl text-white lg:text-4xl font-bold mb-4 text-center ">
+              {EN_TEXT.hero}
+            </h1>
+            <p className="text-lg text-gray-400 lg:text-xl mb-8 text-center ">
+              {EN_TEXT.tagline}
+            </p>
+            <div className="flex flex-col items-center">
+              <h2 className="text-md text-white font-semibold mb-4">
+                Join the Waitlist Today and Get Early Access with Exclusive
+                Benefits!
+              </h2>
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  onChange={handleValueChange}
+                  value={email}
+                  className="border border-gray-400 p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
+                />
+                <Button onClick={onFormSubmit}>Get Access!</Button>
+                <button
+                  onClick={() => setIsWaitListModal(true)}
+                  type="submit"
+                  className=" text-gray-300 p-2 pr-4 pl-4 rounded w-full sm:w-auto text-sm mt-4 sm:mt-0"
+                >
+                  Why join the waitlist?
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.container}>
+        {/* <div className="container justify-center mx-auto mt-20 ">
           <div className="flex flex-col bg-red lg:flex-row items-center lg:items-start lg:space-x-8">
-            {/* <div className="flex-1">
-              <Image
-                src={landingimage}
-                alt="CloudClaim App"
-                className="w-full h-auto"
-                height={0}
-                width={0}
-                style={{ borderRadius: 4}}
-              />
-            </div> */}
             <div className="flex-1 flex-col items-center text-center justify-center lg:text-left mb-8 lg:mb-0">
               <h1 className="text-5xl lg:text-4xl font-bold mb-4">
                 {EN_TEXT.hero}
@@ -215,12 +252,16 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div id="features" className="container mt-20 pt-3 " style={{marginTop: 180}}>
+        <div
+          id="features"
+          className="container  pt-3 "
+          style={{ marginTop: 100 }}
+        >
           <main className="">
             <div className="text-3xl font-bold text-center mb-6">
-              <h1>Process 2x more claims  </h1>
+              <h1>Process 2x more claims </h1>
             </div>
             <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
               Empowering Insurance Adjusters with Advanced Tools and AI
