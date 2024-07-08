@@ -7,18 +7,11 @@ import Image from "next/image";
 import { useState } from "react";
 import welcomeImage from "../../public/image.png";
 import landingimage from "../../public/landingimage.jpg";
-// import FAQs from "../components/FAQs";
-// import FeatureCard from "../components/Feature";
-// import Footer from "../components/Footer";
-// import HowItWorks from "../components/HowItWorks";
-// import Loader from "../components/Loader";
-// import NavBar from "../components/NavBar";
-// import ThankYouModal from "../components/ThankYouModal";
-// import WaitlistModal from "../components/WaitlistModal";
 import styles from "../styles/Home.module.css";
 import { EN_TEXT } from "@/lib/dictionaries/en";
 import Button from "@/components/Button";
 import Card from "../components/Card";
+import ClaimTypePage from "../components/ClaimTypePage";
 
 const NavBar = dynamic(() => import("../components/NavBar"), {
   ssr: false,
