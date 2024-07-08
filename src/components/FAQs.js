@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { appName } from "../lib/variables";
 
-import Accordion from './Accordion';
+import Accordion from "./Accordion";
 import Button from "./Button";
 
 const FAQs = () => {
@@ -105,14 +105,12 @@ const FAQs = () => {
         <div className="space-y-4">
           {items.map((item, indx) => {
             return (
-              <Accordion title={item.title}>
+              <Accordion key={indx} title={item.title}>
                 <p>{item.content}</p>
               </Accordion>
-            )
+            );
           })}
         </div>
-
-       
       </div>
     </section>
   );
