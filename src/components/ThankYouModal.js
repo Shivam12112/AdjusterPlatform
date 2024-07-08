@@ -26,12 +26,7 @@ const ThankYouModal = ({
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 overflow-y-auto overflow-x-hidden bg-black bg-opacity-50">
       <div className="relative w-full max-w-md p-4">
-        <div
-          className="relative rounded-lg shadow dark:bg-gray-700"
-          style={{
-            backgroundColor: "#FFFAF0",
-          }}
-        >
+        <div className="relative rounded-lg shadow bg-floralwhite dark:bg-gray-700">
           <button
             onClick={() => setIsShown(false)}
             type="button"

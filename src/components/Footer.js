@@ -1,5 +1,5 @@
-import { appName } from '@/lib/variables';
-import React from 'react';
+import { appName } from "@/lib/variables";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="relative z-10 container mx-auto px-6 py-8 flex flex-col md:flex-row flex-start">
         <div className="mb-6 md:mb-0 md:w-1/4">
           <img
-            src="/logo.svg" // Update with your logo path
+            src="/" // Update with your logo path
             alt={appName}
             className="h-12"
           />
@@ -30,21 +30,49 @@ const Footer = () => {
         <div className="mb-6 md:mb-0 md:w-1/4">
           <h5 className="font-bold mb-2">About us</h5>
           <ul>
-            <li><a href="#" className="hover:underline">About us</a></li>
-            <li><a href="#" className="hover:underline">Product Features</a></li>
-            <li><a href="#" className="hover:underline">Pricing</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                About us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Product Features
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Pricing
+              </a>
+            </li>
           </ul>
         </div>
         <div className="mb-6 md:mb-0 md:w-1/4">
           <h5 className="font-bold mb-2">Line of Business</h5>
           <ul>
-            <li><a href="#" className="hover:underline">Wind Claims</a></li>
-            <li><a href="#" className="hover:underline">Flood Claims</a></li>
-            <li><a href="#" className="hover:underline">Fire Claims</a></li>
-            <li><a href="#" className="hover:underline">Custom Process</a></li>
+            <li>
+              <a href="#" className="hover:underline">
+                Wind Claims
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Flood Claims
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Fire Claims
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Custom Process
+              </a>
+            </li>
           </ul>
         </div>
-       
+
         {/* <div className="mb-6 md:mb-0 md:w-1/4">
           <h5 className="font-bold mb-2">Category 3</h5>
           <ul>

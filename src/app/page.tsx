@@ -25,6 +25,9 @@ const Loader = dynamic(() => import("../components/Loader"), {
 const HowItWorks = dynamic(() => import("../components/HowItWorks"), {
   ssr: false,
 });
+const GetEarlyAccess = dynamic(() => import("../components/GetEarlyAccess"), {
+  ssr: false,
+});
 const Footer = dynamic(() => import("../components/Footer"), {
   ssr: false,
 });
@@ -44,20 +47,47 @@ const FAQs = dynamic(() => import("../components/FAQs"), {
 
 const Home = () => {
   const [email, setEmail] = useState<string>("");
+  const [fullName, setFullName] = useState<string>("");
   const [showThankYouModal, setShowhankYouModal] = useState<boolean>(false);
   const [showErrorModal, setShowErrorModal] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isWaitListModal, setIsWaitListModal] = useState<boolean>(false);
+  const [validationError, setValidationError] = useState<object>({
+    fullName: "",
+    email: "",
+  });
 
-  const handleAddToWitList = async (payload: any) => {
-    if (!payload) return;
+  const checkValidationError = () => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let newValidationError = { fullName: "", email: "" };
+
+    if (fullName.length === 0) {
+      newValidationError.fullName = "Full name is required!";
+    } else {
+      newValidationError.fullName = "";
+      // delete newValidationError.fullName;
+    }
+
+    if (email.length === 0) {
+      newValidationError.email = "Email is required!";
+    } else if (!emailPattern.test(email)) {
+      newValidationError.email = "Enter a valid email address";
+    } else {
+      newValidationError.email = "";
+      // delete newValidationError.email;
+    }
+    return newValidationError;
+  };
+
+  const handleAddToWitList = async () => {
+    if (!fullName || !email) return;
     try {
       setIsLoading(true);
       const allData = await fetchAllData();
       const isExisting = allData.records.filter(
         (item: any) => item.email === email
       );
-      if (isExisting.length > 0) {
+      if (isExisting?.length > 0) {
         setIsLoading(false);
         setShowErrorModal(true);
       }
@@ -66,7 +96,7 @@ const Home = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email: payload }),
+        body: JSON.stringify({ email: email, full_name: fullName }),
       });
       if (!response.ok) {
         setIsLoading(false);
@@ -76,6 +106,7 @@ const Home = () => {
       setShowhankYouModal(true);
       setIsLoading(false);
       setEmail("");
+      setFullName("");
       console.log("Data posted successfully:", result);
     } catch (error) {
       setIsLoading(false);
@@ -130,11 +161,22 @@ const Home = () => {
   ];
   const handleValueChange = (e: any) => {
     e.preventDefault();
-    setEmail(e.target.value);
+    if (e.target.name === "full-name") setFullName(e.target.value);
+    else setEmail(e.target.value);
   };
   const onFormSubmit = (e: any) => {
     e.preventDefault();
-    handleAddToWitList(email);
+    const validate = checkValidationError();
+    if (Object.keys(validate).length) {
+      console.log(validate);
+      setValidationError(validate);
+    } else {
+      setValidationError({
+        fullName: "",
+        email: "",
+      });
+      handleAddToWitList();
+    }
   };
 
   if (typeof window === "undefined") {
@@ -143,9 +185,10 @@ const Home = () => {
 
   return (
     <div
-      style={{
-        backgroundColor: "#FFFAF0",
-      }}
+      className="dark:text-gray-400"
+      // style={{
+      //   backgroundColor: "#FFFAF0",
+      // }}
     >
       <NavBar />
       <ThankYouModal
@@ -178,7 +221,7 @@ const Home = () => {
       >
         <div
           style={{
-            padding: "10rem 10rem 15rem 10rem",
+            padding: "10rem 10rem 10rem 10rem",
           }}
           className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8 bg-gray-900 bg-opacity-70 rounded"
         >
@@ -195,21 +238,23 @@ const Home = () => {
                 Benefits!
               </h2>
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center">
-                <input
+                {/* <input
                   type="email"
                   placeholder="Enter your email"
                   onChange={handleValueChange}
                   value={email}
                   className="border border-gray-400 p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
-                />
-                <Button onClick={onFormSubmit}>Get Access!</Button>
-                <button
+                /> */}
+                <button className="bg-teal-700 text-white py-2 px-4 rounded hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:text-white">
+                  <a href="#get-early-access">Get Access!</a>
+                </button>
+                {/* <button
                   onClick={() => setIsWaitListModal(true)}
                   type="submit"
                   className=" text-gray-300 p-2 pr-4 pl-4 rounded w-full sm:w-auto text-sm mt-4 sm:mt-0"
                 >
                   Why join the waitlist?
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -217,58 +262,21 @@ const Home = () => {
       </div>
 
       <div className={styles.container}>
-        {/* <div className="container justify-center mx-auto mt-20 ">
-          <div className="flex flex-col bg-red lg:flex-row items-center lg:items-start lg:space-x-8">
-            <div className="flex-1 flex-col items-center text-center justify-center lg:text-left mb-8 lg:mb-0">
-              <h1 className="text-5xl lg:text-4xl font-bold mb-4">
-                {EN_TEXT.hero}
-              </h1>
-              <p className="text-lg text-gray-600 lg:text-xl mb-8">
-                {EN_TEXT.tagline}
-              </p>
-
-              <div className="flex flex-col items-center">
-                <h2 className="text-md font-semibold mb-4">
-                  Join the Waitlist Today and Get Early Access with Exclusive
-                  Benefits!"
-                </h2>
-                <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    onChange={handleValueChange}
-                    value={email}
-                    className="border border-gray-400  p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
-                  />
-                  <Button onClick={onFormSubmit}>Get Access!</Button>
-                  <button
-                    onClick={() => setIsWaitListModal(true)}
-                    type="submit"
-                    className="bg-white-500 text-blue p-2 pr-4 pl-4 rounded w-full sm:w-auto text-sm"
-                  >
-                    Why join the waitlist?
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         <div
           id="features"
-          className="container  pt-3 "
+          className="container pt-3 "
           style={{ marginTop: 100 }}
         >
           <main className="">
             <div className="text-3xl font-bold text-center mb-6">
               <h1>Process 2x more claims </h1>
             </div>
-            <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-gray-700 dark:text-gray-400 mb-12 max-w-2xl mx-auto ">
               Empowering Insurance Adjusters with Advanced Tools and AI
               Capabilities.
             </p>
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {features.map((feature, index) => (
+              {features?.map((feature, index) => (
                 <FeatureCard
                   key={index}
                   icon={feature.icon}
@@ -286,8 +294,19 @@ const Home = () => {
             </div> */}
           </main>
         </div>
+        <div style={{ marginTop: 100 }}>
+          <HowItWorks />
+        </div>
+        <div style={{ marginTop: 100 }}>
+          <GetEarlyAccess
+            handleValueChange={handleValueChange}
+            fullName={fullName}
+            email={email}
+            validationError={validationError}
+            onFormSubmit={onFormSubmit}
+          />
+        </div>
 
-        <HowItWorks />
         <FAQs />
       </div>
       <Footer />

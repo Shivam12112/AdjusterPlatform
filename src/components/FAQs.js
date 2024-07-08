@@ -97,13 +97,13 @@ const FAQs = () => {
             <h1>Frequently Asked Questions</h1>
           </div>
 
-          <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-gray-700 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
             Explore answers to commonly raised inquiries about {appName}
           </p>
         </div>
 
         <div className="space-y-4">
-          {items.map((item, indx) => {
+          {items?.map((item, indx) => {
             return (
               <Accordion key={indx} title={item.title}>
                 <p>{item.content}</p>

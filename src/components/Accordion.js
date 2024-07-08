@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import './accordion.css';
+import { useState } from "react";
+import "./accordion.css";
 
 const Accordion = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,8 +16,14 @@ const Accordion = ({ title, children }) => {
       >
         {title}
       </button>
-      <div className={`accordion-content overflow-hidden transition-max-height duration-500 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
-        <div className="p-4 bg-white border border-teal-700">{children}</div>
+      <div
+        className={`accordion-content overflow-hidden transition-max-height duration-500 ease-in-out ${
+          isOpen ? "max-h-96" : "max-h-0"
+        }`}
+      >
+        <div className="p-4 bg-white dark:bg-gray-800  border border-teal-700">
+          {children}
+        </div>
       </div>
     </div>
   );

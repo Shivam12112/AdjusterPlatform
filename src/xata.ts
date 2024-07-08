@@ -18,6 +18,13 @@ const tables = [
         defaultValue: null,
       },
       {
+        name: "full_name",
+        type: "text",
+        notNull: false,
+        unique: false,
+        defaultValue: null,
+      },
+      {
         name: "xata_createdat",
         type: "datetime",
         notNull: true,

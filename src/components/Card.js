@@ -1,4 +1,4 @@
-import { InformationCircleIcon } from '@heroicons/react/solid';
+import { InformationCircleIcon } from "@heroicons/react/solid";
 
 const Card = ({ title, content, icon: Icon }) => {
   return (

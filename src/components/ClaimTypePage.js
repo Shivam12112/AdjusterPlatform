@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ClaimTypePage = ({ type, description, features, benefits }) => (
   <div className="p-8 bg-floralwhite min-h-screen">
@@ -7,13 +7,17 @@ const ClaimTypePage = ({ type, description, features, benefits }) => (
     <h2 className="text-teal-700 text-xl font-bold mb-2">Features</h2>
     <ul className="mb-4">
       {features.map((feature, index) => (
-        <li key={index} className="mb-2 text-teal-900">{feature}</li>
+        <li key={index} className="mb-2 text-teal-900">
+          {feature}
+        </li>
       ))}
     </ul>
     <h2 className="text-teal-700 text-xl font-bold mb-2">Benefits</h2>
     <ul>
       {benefits.map((benefit, index) => (
-        <li key={index} className="mb-2 text-teal-900">{benefit}</li>
+        <li key={index} className="mb-2 text-teal-900">
+          {benefit}
+        </li>
       ))}
     </ul>
   </div>

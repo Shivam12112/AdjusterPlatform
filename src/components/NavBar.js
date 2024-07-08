@@ -10,12 +10,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav
-        style={{
-          backgroundColor: "#FFFAF0",
-        }}
-        className="fixed w-full top-0 border-b border-gray-300 dark:bg-blue-900 dark:border-gray-700"
-      >
+      <nav className="fixed w-full top-0 border-b border-gray-300 bg-floralwhite dark:bg-gray-900 dark:border-gray-700">
         <div className="flex flex-wrap items-center justify-between p-4 lg:px-20">
           <a
             href="#"
@@ -51,18 +46,10 @@ const NavBar = () => {
             </svg>
           </button>
           <div
-            className={`w-full md:block md:w-auto ${isOpen ? "" : "hidden"}`}
+            className={`w-full  md:block md:w-auto ${isOpen ? "" : "hidden"}`}
             id="navbar-solid-bg"
-            style={{
-              backgroundColor: "#FFFAF0",
-            }}
           >
-            <ul
-              style={{
-                backgroundColor: "#FFFAF0",
-              }}
-              className="flex flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700"
-            >
+            <ul className="flex flex-col bg-floralwhite font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
               <li>
                 <a
                   href="#features"
