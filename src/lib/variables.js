@@ -1,1 +1,1 @@
-export const appName = "ClaimCloud";
+export const appName = "AdjusterCopilot";

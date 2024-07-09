@@ -10,16 +10,16 @@ const GetEarlyAccess = ({
 }) => {
   return (
     <section id="get-early-access" className="container pt-3 ">
-      <div className="text-3xl font-bold text-center mb-6">
+      <div className="text-4xl font-bold text-center mb-6">
         <h1>Be the first to know </h1>
       </div>
-      <p className="text-center text-gray-700 dark:text-gray-400 max-w-2xl mx-auto">
+      <p className="text-center text-2xl text-gray-700 dark:text-gray-400  mx-auto">
         Stay Ahead of the Curve.
       </p>
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
         <div className=" lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
           <div className="text-center">
-            <h1 className="title-font font-semibold text-3xl text-gray-900 dark:text-gray-400">
+            <h1 className="title-font font-semibold text-4xl text-gray-900 dark:text-gray-400">
               Why Join WaitList?
             </h1>
           </div>

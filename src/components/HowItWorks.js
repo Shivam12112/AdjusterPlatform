@@ -6,7 +6,7 @@ const HowItWorks = () => {
   return (
     <section className="py-12" id="how-it-works">
       <h1 className="text-4xl font-bold text-center mb-6">How it works</h1>
-      <p className="text-center text-gray-700 dark:text-gray-400 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+      <p className="text-center text-2xl text-gray-700 dark:text-gray-400 dark:text-gray-400 mb-12 mx-auto">
         Effortless Claims Processing in Just a Few Steps.
       </p>
       <div className="flex flex-col lg:flex-row items-center lg:space-x-12 space-y-12 lg:space-y-0">

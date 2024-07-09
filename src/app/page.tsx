@@ -12,8 +12,8 @@ import landingImage from "../../public/landingimage.jpg";
 // import NavBar from "../components/NavBar";
 // import ThankYouModal from "../components/ThankYouModal";
 // import WaitlistModal from "../components/WaitlistModal";
-import Button from "@/components/Button";
 import { EN_TEXT } from "@/lib/dictionaries/en";
+import { features } from "../lib/features/features";
 import styles from "../styles/Home.module.css";
 
 const NavBar = dynamic(() => import("../components/NavBar"), {
@@ -121,43 +121,6 @@ const Home = () => {
     } catch (error) {}
   };
 
-  const features = [
-    {
-      icon: "/insurance-protection-icon.svg",
-      title: "Tailored Workflows",
-      description:
-        "Create and manage workflows customized for each insurance carrier and line of business, ensuring consistency across all claims.",
-    },
-    {
-      icon: "/check-list-icon.svg",
-      title: "Questionnaire and Site Survey Tools",
-      description:
-        "Design detailed questionnaires and conduct thorough site surveys with our offline-first mobile app, capturing all necessary information accurately without an internet connection.",
-    },
-    {
-      icon: "/process.svg",
-      title: "Enhanced Review Process",
-      description:
-        "Use our mobile app to perform in-depth reviews and improve Turnaround Time (TAT) for processing claims, handling more claims efficiently.",
-    },
-    {
-      icon: "/analysis-icon.svg",
-      title: "AI-Powered Annotation",
-      description:
-        "Automatically recognize items and annotate damages using AI, saving time and reducing manual errors.",
-    },
-    {
-      icon: "/computer-report-icon.svg",
-      title: "Customizable Reports",
-      description:
-        "Generate comprehensive, tailored reports for each insurance carrier, presenting findings clearly and professionally.",
-    },
-    {
-      icon: "/padlock-black-icon.svg",
-      title: "Industry-Leading Security",
-      description: `Adhere to top OWASP security standards and best-in-class security practices to protect your data with robust, enterprise-grade measures.`,
-    },
-  ];
   const handleValueChange = (e: any) => {
     e.preventDefault();
     if (e.target.name === "full-name") setFullName(e.target.value);
@@ -185,12 +148,7 @@ const Home = () => {
   }
 
   return (
-    <div
-      className="dark:text-gray-400"
-      // style={{
-      //   backgroundColor: "#FFFAF0",
-      // }}
-    >
+    <div className="dark:text-gray-400">
       <NavBar />
       <ThankYouModal
         isShown={showThankYouModal}
@@ -222,19 +180,19 @@ const Home = () => {
       >
         <div
           style={{
-            padding: "10rem 10rem 10rem 10rem",
+            padding: "10rem 2rem 10rem 2rem",
           }}
           className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8 bg-gray-900 bg-opacity-70 rounded"
         >
-          <div className="flex-1 flex-col items-center text-center justify-center lg:text-left mb-8 lg:mb-0">
-            <h1 className="text-5xl text-white lg:text-4xl font-bold mb-4 text-center ">
+          <div className="flex-1 flex-col items-center text-center justify-center mb-8 lg:mb-0">
+            <h1 className="text-2xl text-white lg:text-4xl font-bold mb-4 text-center ">
               {EN_TEXT.hero}
             </h1>
-            <p className="text-lg text-gray-400 lg:text-xl mb-8 text-center ">
+            <p className="text-xl text-gray-300 lg:text-2xl mb-8 text-center ">
               {EN_TEXT.tagline}
             </p>
             <div className="flex flex-col items-center">
-              <h2 className="text-md text-white font-semibold mb-4">
+              <h2 className="text-md  text-white font-semibold mb-4">
                 Join the Waitlist Today and Get Early Access with Exclusive
                 Benefits!
               </h2>
@@ -246,8 +204,14 @@ const Home = () => {
                   value={email}
                   className="border border-gray-400 p-2 rounded mb-4 sm:mb-0 sm:mr-4 w-full sm:w-auto"
                 /> */}
-                <button className="bg-teal-700 text-white py-2 px-4 rounded hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:text-white">
-                  <a href="#get-early-access">Get Access!</a>
+                <button
+                  style={{
+                    padding: "1rem 4rem 1rem 4rem",
+                    // paddingRight: "3rem",
+                  }}
+                  className="bg-floralwhite text-gray-950 py-2 rounded hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:text-white"
+                >
+                  <a href="#get-early-access ">Get Access!</a>
                 </button>
                 {/* <button
                   onClick={() => setIsWaitListModal(true)}
@@ -262,17 +226,17 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={styles.container}>
+      <div className="container px-5 lg:mx-auto">
         <div
           id="features"
           className="container pt-3 "
           style={{ marginTop: 100 }}
         >
           <main className="">
-            <div className="text-3xl font-bold text-center mb-6">
+            <div className="text-4xl font-bold text-center mb-6">
               <h1>Process 2x more claims </h1>
             </div>
-            <p className="text-center text-gray-700 dark:text-gray-400 mb-12 max-w-2xl mx-auto ">
+            <p className="text-2xl text-center text-gray-700 dark:text-gray-400 mb-12  mx-auto ">
               Empowering Insurance Adjusters with Advanced Tools and AI
               Capabilities.
             </p>

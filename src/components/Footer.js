@@ -24,7 +24,7 @@ const Footer = () => {
             alt={appName}
             className="h-12"
           />
-          <p>©CloudClaim 2024 </p>
+          <p>@{appName} 2024 </p>
           <p>All rights reserved.</p>
         </div>
         <div className="mb-6 md:mb-0 md:w-1/4">
