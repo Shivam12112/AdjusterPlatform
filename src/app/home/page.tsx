@@ -3,45 +3,41 @@
 import { appName } from "@/lib/variables";
 import dynamic from "next/dynamic";
 import { useState } from "react";
-import landingImage from "../../public/landingimage.jpg";
-// import FAQs from "../components/FAQs";
-// import FeatureCard from "../components/Feature";
-// import Footer from "../components/Footer";
-// import HowItWorks from "../components/HowItWorks";
-// import Loader from "../components/Loader";
-// import NavBar from "../components/NavBar";
-// import ThankYouModal from "../components/ThankYouModal";
-// import WaitlistModal from "../components/WaitlistModal";
+import landingImage from "../../../public/landingimage.jpg";
+
 import { EN_TEXT } from "@/lib/dictionaries/en";
-import { features } from "../lib/features/features";
+import { features } from "../../lib/features/features";
 import styles from "../styles/Home.module.css";
 
-const NavBar = dynamic(() => import("../components/NavBar"), {
+const NavBar = dynamic(() => import("../../components/NavBar"), {
   ssr: false,
 });
-const Loader = dynamic(() => import("../components/Loader"), {
+const Loader = dynamic(() => import("../../components/Loader"), {
   ssr: false,
 });
-const HowItWorks = dynamic(() => import("../components/HowItWorks"), {
+const HowItWorks = dynamic(() => import("../../components/HowItWorks"), {
   ssr: false,
 });
-const GetEarlyAccess = dynamic(() => import("../components/GetEarlyAccess"), {
+const GetEarlyAccess = dynamic(
+  () => import("../../components/GetEarlyAccess"),
+  {
+    ssr: false,
+  }
+);
+const Footer = dynamic(() => import("../../components/Footer"), {
   ssr: false,
 });
-const Footer = dynamic(() => import("../components/Footer"), {
-  ssr: false,
-});
-const FeatureCard = dynamic(() => import("../components/Feature"), {
+const FeatureCard = dynamic(() => import("../../components/Feature"), {
   ssr: false,
 });
 
-const ThankYouModal = dynamic(() => import("../components/ThankYouModal"), {
+const ThankYouModal = dynamic(() => import("../../components/ThankYouModal"), {
   ssr: false,
 });
-const WaitlistModal = dynamic(() => import("../components/WaitlistModal"), {
+const WaitlistModal = dynamic(() => import("../../components/WaitlistModal"), {
   ssr: false,
 });
-const FAQs = dynamic(() => import("../components/FAQs"), {
+const FAQs = dynamic(() => import("../../components/FAQs"), {
   ssr: false,
 });
 
@@ -148,7 +144,7 @@ const Home = () => {
   }
 
   return (
-    <div className="dark:text-gray-400">
+    <div id="#" className="dark:text-gray-400">
       <NavBar />
       <ThankYouModal
         isShown={showThankYouModal}
@@ -171,11 +167,10 @@ const Home = () => {
       <Loader isLoading={isLoading} />
 
       <div
-        className="justify-center mx-0 mt-20 bg-cover bg-center"
+        className="justify-center mx-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${landingImage.src})`,
           marginTop: "4rem",
-          // width: "100vw",
         }}
       >
         <div
@@ -207,11 +202,13 @@ const Home = () => {
                 <button
                   style={{
                     padding: "1rem 4rem 1rem 4rem",
-                    // paddingRight: "3rem",
+                    // visibility: "hidden",
                   }}
-                  className="bg-floralwhite text-gray-950 py-2 rounded hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:text-white"
+                  className="bg-green-300 text-gray-950 py-2 rounded hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:text-white"
                 >
-                  <a href="#get-early-access ">Get Access!</a>
+                  <a href="#get-early-access" className="font-bold">
+                    Get Access!
+                  </a>
                 </button>
                 {/* <button
                   onClick={() => setIsWaitListModal(true)}

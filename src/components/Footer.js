@@ -1,4 +1,5 @@
 import { appName } from "@/lib/variables";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -31,17 +32,17 @@ const Footer = () => {
           <h5 className="font-bold mb-2">About us</h5>
           <ul>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/about-us" className="hover:underline">
                 About us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/product-feature" className="hover:underline">
                 Product Features
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/pricing" className="hover:underline">
                 Pricing
               </a>
             </li>
@@ -51,24 +52,24 @@ const Footer = () => {
           <h5 className="font-bold mb-2">Line of Business</h5>
           <ul>
             <li>
-              <a href="#" className="hover:underline">
+              <Link href="/claim-type/wind" className="hover:underline">
                 Wind Claims
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <Link href="/claim-type/flood" className="hover:underline">
                 Flood Claims
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <Link href="/claim-type/fire" className="hover:underline">
                 Fire Claims
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <Link href="#" className="hover:underline">
                 Custom Process
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

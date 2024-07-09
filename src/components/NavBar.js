@@ -1,4 +1,6 @@
+"use client";
 import { appName } from "@/lib/variables";
+import Link from "next/link";
 import { useState } from "react";
 
 const NavBar = () => {
@@ -9,17 +11,21 @@ const NavBar = () => {
   };
 
   return (
-    <>
-      <nav className="fixed w-full top-0 border-b border-gray-300 bg-floralwhite dark:bg-gray-900 dark:border-gray-700">
+    <div
+      style={{
+        marginBottom: "4rem",
+      }}
+    >
+      <nav className="fixed w-full top-0 z-50 border-b border-gray-300 bg-floralwhite dark:bg-gray-900 dark:border-gray-700">
         <div className="flex flex-wrap items-center justify-between p-4 lg:px-20">
-          <a
-            href="#"
+          <Link
+            href="/home#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               {appName}
             </span>
-          </a>
+          </Link>
           <button
             data-collapse-toggle="navbar-solid-bg"
             type="button"
@@ -52,7 +58,7 @@ const NavBar = () => {
             <ul className="flex flex-col bg-floralwhite font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
               <li>
                 <a
-                  href="#features"
+                  href="/home#features"
                   className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Features
@@ -60,7 +66,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#how-it-works"
+                  href="/home#how-it-works"
                   className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   How it Works
@@ -68,7 +74,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#faqs"
+                  href="/home#faqs"
                   className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   FAQs
@@ -78,7 +84,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
