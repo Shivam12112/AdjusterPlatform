@@ -15,9 +15,18 @@ const NavBar = dynamic(() => import("../../components/NavBar"), {
 const Loader = dynamic(() => import("../../components/Loader"), {
   ssr: false,
 });
+
+const WhyChooseThisPlatform = dynamic(
+  () => import("../../components/WhyChooseThisPlatform"),
+  {
+    ssr: false,
+  }
+);
+
 const HowItWorks = dynamic(() => import("../../components/HowItWorks"), {
   ssr: false,
 });
+
 const GetEarlyAccess = dynamic(
   () => import("../../components/GetEarlyAccess"),
   {
@@ -143,6 +152,30 @@ const Home = () => {
     return null; // Return null or a loader if you prefer
   }
 
+  const Benefits = () => {
+    return (
+      <main className="">
+        <div className="text-4xl font-bold text-center mb-6">
+          <h1>Claims Documentation Made Easy </h1>
+        </div>
+        <p className="text-2xl text-center text-gray-700 dark:text-gray-400 mb-12  mx-auto ">
+          Streamline Your Claim Inspections with Accurate, Organized
+          Documentation
+        </p>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {features?.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
+        </div>
+      </main>
+    );
+  };
+
   return (
     <div id="#" className="dark:text-gray-400">
       <NavBar />
@@ -187,10 +220,10 @@ const Home = () => {
               {EN_TEXT.tagline}
             </p>
             <div className="flex flex-col items-center">
-              <h2 className="text-md  text-white font-semibold mb-4">
+              {/* <h2 className="text-md  text-white font-semibold mb-4">
                 Join the Waitlist Today and Get Early Access with Exclusive
                 Benefits!
-              </h2>
+              </h2> */}
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center">
                 {/* <input
                   type="email"
@@ -204,10 +237,10 @@ const Home = () => {
                     padding: "1rem 4rem 1rem 4rem",
                     // visibility: "hidden",
                   }}
-                  className="bg-green-300 text-gray-950 py-2 rounded hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:text-white"
+                  className="bg-teal-300 text-white py-2 rounded hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:text-white"
                 >
                   <a href="#get-early-access" className="font-bold">
-                    Get Access!
+                    Get Started
                   </a>
                 </button>
                 {/* <button
@@ -223,43 +256,285 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container px-5 lg:mx-auto">
+      <div className="container px-5 lg:mx-auto" id="features">
         <div
-          id="features"
-          className="container pt-3 "
+          // id="features"
+          className="container pt-3 hidden"
           style={{ marginTop: 100 }}
         >
-          <main className="">
-            <div className="text-4xl font-bold text-center mb-6">
-              <h1>Process 2x more claims </h1>
-            </div>
-            <p className="text-2xl text-center text-gray-700 dark:text-gray-400 mb-12  mx-auto ">
-              Empowering Insurance Adjusters with Advanced Tools and AI
-              Capabilities.
-            </p>
-            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {features?.map((feature, index) => (
-                <FeatureCard
-                  key={index}
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              ))}
-            </div>
-            {/* TODO: <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <Card 
-                title="Features"
-                content="Our platform offers customizable workflows, ML-driven annotations, and more."
-                icon={''}
-              />
-            </div> */}
-          </main>
+          <Benefits />
         </div>
+
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="text-center mb-20">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+                Claims Documentation Made Easy
+              </h1>
+              <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+                Streamline Your Claim Inspections with Accurate, Organized
+                Documentation
+              </p>
+              <div className="flex mt-6 justify-center">
+                <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              </div>
+            </div>
+            <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+              <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-10 h-10"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div className="flex-grow">
+                  <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                    Customizable Templates
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    Adjusters can create templates for different types of field
+                    inspections, ensuring no critical information is missed.
+                    Templates can be reused, making each inspection quicker and
+                    more consistent.
+                  </p>
+                  {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> */}
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-10 h-10"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                  </svg>
+                </div>
+                <div className="flex-grow">
+                  <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                    Mobile-Friendly
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    All templates and inspections are accessible on mobile
+                    devices, allowing adjusters to perform inspections on the
+                    go, even without an internet connection.
+                  </p>
+                  {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> */}
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-10 h-10"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div className="flex-grow">
+                  <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                    Supports Multiple Lines of Business
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    Whether you handle auto claims or property and casualty
+                    (P&C) insurance, the platform adapts to suit your needs.
+                  </p>
+                  {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> */}
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-wrap  sm:-m-4 -mx-4 -mb-10 -mt-8 md:space-y-0 space-y-8 lg:mt-12">
+              <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-10 h-10"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div className="flex-grow">
+                  <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                    Streamlined Process
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    The platform ensures that field inspections follow a
+                    structured workflow, making data collection easier and more
+                    reliable.
+                  </p>
+                  {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> */}
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-10 h-10"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                  </svg>
+                </div>
+                <div className="flex-grow">
+                  <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                    Reduce Errors and Omissions
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    By following a set template, adjusters are less likely to
+                    miss critical information during an inspection.
+                  </p>
+                  {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> */}
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-10 h-10"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div className="flex-grow">
+                  <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                    Best-In-Class Security
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    Every API connection is secured with best-in-class SSL and
+                    the system adheres to Top 10 OWASP security standards.
+                  </p>
+                  {/* <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> */}
+                </div>
+              </div>
+            </div>
+            {/* <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            Button
+          </button> */}
+          </div>
+        </section>
+
+        <div className="mt-2 lg:mt-2">
+          <WhyChooseThisPlatform />
+        </div>
+
         <div style={{ marginTop: 100 }}>
           <HowItWorks />
         </div>
-        <div style={{ marginTop: 100 }}>
+        {/* <div style={{ marginTop: 100 }}>
           <GetEarlyAccess
             handleValueChange={handleValueChange}
             fullName={fullName}
@@ -267,7 +542,7 @@ const Home = () => {
             validationError={validationError}
             onFormSubmit={onFormSubmit}
           />
-        </div>
+        </div> */}
 
         <FAQs />
       </div>

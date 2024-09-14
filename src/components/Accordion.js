@@ -12,7 +12,7 @@ const Accordion = ({ title, children }) => {
     <div className="accordion my-4">
       <button
         onClick={toggleAccordion}
-        className="accordion-header p-4 w-full text-left bg-teal-700 text-white hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
+        className="rounded-sm accordion-header p-4 w-full text-left bg-teal-700 text-white  hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
       >
         {title}
       </button>

@@ -10,7 +10,7 @@ const ibm_plex_sans = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   title: "AdjusterCopilot",
-  description: "Intelligent workflows for P&C insurance",
+  description: "Intelligent workflows for insurance adjusters",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{background: "#202432"}}>
       <body className={ibm_plex_sans.className}>{children}</body>
     </html>
   );

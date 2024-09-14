@@ -1,5 +1,6 @@
 "use client";
 import { appName } from "@/lib/variables";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -24,6 +25,7 @@ const NavBar = () => {
           >
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               {appName}
+              {/* <Image src={'/../../public/ac-logo.png'} width={44} height={'20'}></Image> */}
             </span>
           </Link>
           <button

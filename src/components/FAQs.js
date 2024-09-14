@@ -92,7 +92,7 @@ const FAQs = () => {
   return (
     <section className="py-12 dark:bg-gray-950" id="faqs">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <div className="text-4xl font-bold text-center  mb-6">
             <h1>Frequently Asked Questions</h1>
           </div>
@@ -100,6 +100,18 @@ const FAQs = () => {
           <p className="text-center text-2xl text-gray-700 dark:text-gray-400 mb-12  mx-auto">
             Explore answers to commonly raised inquiries about {appName}
           </p>
+        </div> */}
+
+        <div className="text-center mb-20">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-base  leading-relaxed mx-auto text-gray-500s">
+            Explore answers to commonly raised inquiries about {appName}
+          </p>
+          <div className="flex mt-6 justify-center">
+            <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+          </div>
         </div>
 
         <div className="space-y-4">

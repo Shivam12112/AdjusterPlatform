@@ -20,11 +20,13 @@ const Footer = () => {
       </div>
       <div className="relative z-10 container mx-auto px-6 py-8 flex flex-col md:flex-row flex-start">
         <div className="mb-6 md:mb-0 md:w-1/4">
-          <img
-            src="/" // Update with your logo path
+          {/* <img
+            src="../ac-logo.png" // Update with your logo path
             alt={appName}
             className="h-12"
-          />
+            style={{width:'100%', height:'100%'}}
+          /> */}
+          <h3>AdjusterCopilot</h3>
           <p>@{appName} 2024 </p>
           <p>All rights reserved.</p>
         </div>
