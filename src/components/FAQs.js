@@ -58,12 +58,10 @@ const FAQs = () => {
       content: `The platform is accessible via web and mobile devices, so you can conduct inspections and manage your reports from your smartphone, tablet, or computer.`,
     },
 
-    
     {
       title: `Is ${appName} suitable for all types of insurance claims?`,
       content: `Yes, ${appName} is designed to be versatile and can handle various types of insurance claims across different lines of business. You can customize workflows and questionnaires to fit the specific requirements of each claim type.`,
     },
-
   ];
 
   const renderedItems = items.map((item, index) => {
