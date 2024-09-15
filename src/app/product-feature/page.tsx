@@ -5,6 +5,7 @@ import { features } from "../../lib/features/features";
 import NavBar from "@/components/NavBar";
 import landingImage from "../../../public/landingimage.jpg";
 import { EN_TEXT } from "@/lib/dictionaries/en";
+import Footer from "@/components/Footer";
 
 const page = () => {
   if (typeof window === "undefined") {
@@ -433,6 +434,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </div>
   );
 };

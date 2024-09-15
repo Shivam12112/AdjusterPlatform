@@ -2,20 +2,22 @@ import Image from "next/image";
 import welcomeImage from "../../public/process.jpg";
 import { appName } from "@/lib/variables";
 
-const HowItWorks = () => {
+const WhyChooseThisPlatform = () => {
   return (
     <section className="py-12" id="how-it-works">
-      {/* <h1 className="text-4xl font-bold text-center mb-6">How it works</h1>
+      {/* <h1 className="text-4xl font-bold text-center mb-6">
+        Why Choose AdjusterCopilot?
+      </h1>
       <p className="text-center text-2xl text-gray-700 dark:text-gray-400 dark:text-gray-400 mb-12 mx-auto">
-        Effortless Claims Processing in Just a Few Steps.
+        Built by Certified Insurance Developers for Adjuster Community
       </p> */}
 
       <div className="text-center mb-20">
         <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-        How it works?
+          Why Choose AdjusterCopilot?
         </h1>
-        <p className="text-base  leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
-        Effortless Claims Processing in just a few steps.
+        <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+          Engineered by Certified Insurance Developers for Adjuster Community
         </p>
         <div className="flex mt-6 justify-center">
           <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
@@ -34,41 +36,43 @@ const HowItWorks = () => {
         </div>
         <div className="flex-1 space-y-8 text-center sm:text-left">
           <div>
-            <h2 className="text-2xl font-semibold mb-2">
-            Create Your Account and Choose a Template
+            <h2 className="text-2xl font-semibold title-font text-gray-500s mb-2">
+              Time-Saving
             </h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
               <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
-            Sign up for an account and either select a pre-built template or customize your own to fit the specific needs of your inspection. Templates can be reused, ensuring consistency across all inspections.
+              Predefined templates reduce the time spent preparing for
+              inspections
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold mb-2">Collect Data On-Site Using the Mobile App</h2>
+            <h2 className="text-2xl font-semibold mb-2">
+              Accurate Documentation
+            </h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
               <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
-            Perform inspections in the field using our mobile app. Capture all required data, including photos and notes, even without an internet connection. Your inspection follows a structured workflow to ensure nothing is missed.
+              Structured workflows minimize the risk of errors, improving the
+              quality of reports.
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold mb-2">Sync Data and Generate Comprehensive Reports</h2>
+            <h2 className="text-2xl font-semibold mb-2">Adaptable</h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
               <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
-            Once back online, sync your collected data to the cloud. The platform consolidates everything into a detailed report, including all data and photos, ready for review and sharing.
+              Suitable for various lines of business, making it flexible for any
+              adjuster.
             </p>
           </div>
           {/* <div>
             <h2 className="text-2xl font-semibold mb-2">
               Generate Custom Reports
             </h2>
-            <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
-              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
-            </div>
             <p className="text-gray-700 dark:text-gray-400">
               Create comprehensive, customizable reports that meet the specific
               needs of each insurance carrier. Include detailed findings,
@@ -83,4 +87,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default WhyChooseThisPlatform;

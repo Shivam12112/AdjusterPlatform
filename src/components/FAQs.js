@@ -15,33 +15,52 @@ const FAQs = () => {
     {
       title: `What is ${appName}?`,
       content: `${appName} is a comprehensive platform designed for insurance
-                adjusters to streamline the claims process. It allows adjusters
-                to create customized workflows, conduct site surveys offline,
-                leverage AI for item recognition and damage annotation, and
-                generate detailed reports for insurance carriers.`,
+                adjusters to streamline the claims process. It helps adjusters create templates, collect data on-site, and generate comprehensive reports, all while ensuring that no critical information is missed during the inspection process`,
     },
     {
-      title: `How does ${appName} help improve the claims process?`,
-      content: `${appName} improves the claims process by providing tailored
-                workflows, offline survey capabilities, AI-driven analysis, and
-                customizable reporting. These features help adjusters conduct
-                thorough reviews, reduce manual errors, and process more claims
-                efficiently.`,
+      title: `Can I customize the inspection templates?`,
+      content: `Yes, you can either use the pre-existing templates or customize them to fit your specific needs. This allows you to tailor inspections for different types of claims, ensuring the right information is always captured.`,
     },
     {
-      title: `How does ${appName} ensure data security?`,
-      content: `${appName} adheres to top OWASP security standards and employs
-                best-in-class security practices. This ensures that your data is
-                protected with robust, enterprise-grade security measures at all
-                times.`,
+      title: `How does the ${appName} platform work offline?`,
+      content: `Our mobile app allows you to perform inspections and collect data even when you don’t have an internet connection. All data is stored locally on your device and can be synced to the cloud once you’re back online.`,
     },
+    {
+      title: `What types of claims does this ${appName} support?`,
+      content: `The ${appName} is flexible platform and supports various lines of business, including auto claims, property & casualty (P&C) claims, and more. You can easily switch between claim types without changing systems.`,
+    },
+    {
+      title: `How are reports generated?`,
+      content: `After completing an inspection, the ${appName} consolidates all the collected data, including photos and documents, into a detailed report. The report is automatically generated and ready for review, sharing, or further analysis.`,
+    },
+
+    {
+      title: `Can I send reports directly via email?`,
+      content: `Yes, once a report is generated, you can send it via email directly from the ${appName}. This makes sharing reports with clients, colleagues, or insurance carriers fast and easy.`,
+    },
+
+    {
+      title: `Is my data secure on this platform?`,
+      content: `Absolutely. We take data security seriously. All data is encrypted both in transit and at rest to ensure that sensitive information remains protected and compliant with industry standards.`,
+    },
+
+    {
+      title: `How long does it take to get set up?`,
+      content: `The onboarding process is quick and simple. After creating your account, you can start using pre-existing templates or customize your own to begin field inspections right away.`,
+    },
+    {
+      title: `Is there a free trial available?`,
+      content: `We plan to offer early access to users who join the waitlist, where they can try the platform and provide feedback before its official release. Stay tuned for more details on trial availability.`,
+    },
+
+    {
+      title: `What devices can I use the platform on?`,
+      content: `The platform is accessible via web and mobile devices, so you can conduct inspections and manage your reports from your smartphone, tablet, or computer.`,
+    },
+
     {
       title: `Is ${appName} suitable for all types of insurance claims?`,
       content: `Yes, ${appName} is designed to be versatile and can handle various types of insurance claims across different lines of business. You can customize workflows and questionnaires to fit the specific requirements of each claim type.`,
-    },
-    {
-      title: `What kind of reports can I generate with ${appName}?`,
-      content: `${appName} allows you to generate comprehensive, customizable reports that include detailed findings, annotated images, and additional notes. These reports can be tailored to meet the specific needs of each insurance carrier.`,
     },
   ];
 
@@ -92,7 +111,7 @@ const FAQs = () => {
   return (
     <section className="py-12 dark:bg-gray-950" id="faqs">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <div className="text-4xl font-bold text-center  mb-6">
             <h1>Frequently Asked Questions</h1>
           </div>
@@ -100,6 +119,18 @@ const FAQs = () => {
           <p className="text-center text-2xl text-gray-700 dark:text-gray-400 mb-12  mx-auto">
             Explore answers to commonly raised inquiries about {appName}
           </p>
+        </div> */}
+
+        <div className="text-center mb-20">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-base  leading-relaxed mx-auto text-gray-500s">
+            Explore answers to commonly raised inquiries about {appName}
+          </p>
+          <div className="flex mt-6 justify-center">
+            <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
+          </div>
         </div>
 
         <div className="space-y-4">

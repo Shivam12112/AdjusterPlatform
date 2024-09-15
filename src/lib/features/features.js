@@ -1,37 +1,37 @@
 export const features = [
   {
     icon: "/insurance-protection-icon.svg",
-    title: "Tailored Workflows",
+    title: "Customizable Templates",
     description:
-      "Create and manage workflows customized for each insurance carrier and line of business, ensuring consistency across all claims.",
+      "Adjusters can create templates for different types of field inspections, ensuring no critical information is missed. Templates can be reused, making each inspection quicker and more consistent.",
   },
   {
     icon: "/check-list-icon.svg",
-    title: "Questionnaire and Site Survey Tools",
+    title: "Mobile-Friendly",
     description:
-      "Design detailed questionnaires and conduct thorough site surveys with our offline-first mobile app, capturing all necessary information accurately without an internet connection.",
+      "All templates and inspections are accessible on mobile devices, allowing adjusters to perform inspections on the go, even without an internet connection.",
   },
   {
     icon: "/process.svg",
-    title: "Enhanced Review Process",
+    title: "Supports Multiple Lines of Business",
     description:
-      "Use our mobile app to perform in-depth reviews and improve Turnaround Time (TAT) for processing claims, handling more claims efficiently.",
+      "Whether you handle auto claims or property and casualty (P&C) insurance, the platform adapts to suit your needs.",
   },
   {
     icon: "/analysis-icon.svg",
-    title: "AI-Powered Annotation",
+    title: "Streamlined Process",
     description:
-      "Automatically recognize items and annotate damages using AI, saving time and reducing manual errors.",
+      "The platform ensures that field inspections follow a structured workflow, making data collection easier and more reliable.",
   },
   {
     icon: "/computer-report-icon.svg",
-    title: "Customizable Reports",
+    title: "Reduce Errors and Omissions",
     description:
-      "Generate comprehensive, tailored reports for each insurance carrier, presenting findings clearly and professionally.",
+      "By following a set template, adjusters are less likely to miss critical information during an inspection.",
   },
   {
     icon: "/padlock-black-icon.svg",
     title: "Industry-Leading Security",
-    description: `Adhere to top OWASP security standards and best-in-class security practices to protect your data with robust, enterprise-grade measures.`,
+    description: `Adheres to OWASP Top 10 security standards and best-in-class security practices to protect your data with robust, enterprise-grade measures.`,
   },
 ];

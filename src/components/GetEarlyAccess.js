@@ -19,9 +19,9 @@ const GetEarlyAccess = ({
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
         <div className=" lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
           <div className="text-center">
-            <h className="title-font font-semibold text-xl text-gray-900 dark:text-gray-400">
+            <h3 className="title-font font-semibold text-xl text-gray-900 dark:text-gray-400">
               Why Join WaitList?
-            </h>
+            </h3>
           </div>
 
           <div className="leading-relaxed mt-4">
