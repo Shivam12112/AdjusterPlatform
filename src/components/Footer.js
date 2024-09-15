@@ -31,18 +31,18 @@ const Footer = () => {
           <p>All rights reserved.</p>
         </div>
         <div className="mb-6 md:mb-0 md:w-1/4">
-          <h5 className="font-bold mb-2">About us</h5>
+          <h5 className="font-bold mb-2">Learn More</h5>
           <ul>
             <li>
               <a href="/about-us" className="hover:underline">
                 About us
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/product-feature" className="hover:underline">
                 Product Features
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="/pricing" className="hover:underline">
                 Pricing

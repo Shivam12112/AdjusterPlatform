@@ -211,7 +211,7 @@ const Home = () => {
           style={{
             padding: "10rem 2rem 10rem 2rem",
           }}
-          className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8 bg-gray-900 bg-opacity-70 rounded"
+          className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8 bg-gray-900 bg-opacity-60 rounded"
         >
           <div className="flex-1 flex-col items-center text-center justify-center mb-8 lg:mb-0">
             <h1 className="text-2xl text-white lg:text-4xl font-bold mb-4 text-center ">
@@ -238,7 +238,9 @@ const Home = () => {
                     padding: "1rem 4rem 1rem 4rem",
                     // visibility: "hidden",
                   }}
-                  className="bg-teal-300 text-white py-2 rounded hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:text-white"
+                  // className="bg-teal-300 text-white py-2 rounded hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:text-white"
+                  // className="mt-8 w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-500"
+                  className="rounded-sm accordion-header p-4 w-full text-left bg-teal-700 text-white  hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
                 >
                   <a href="#get-early-access" className="font-bold">
                     Get Started

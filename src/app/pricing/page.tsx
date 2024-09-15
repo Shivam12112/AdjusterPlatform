@@ -5,63 +5,69 @@ import React from "react";
 const Pricing = () => {
   return (
     <div>
-      <NavBar></NavBar>
-      <div className="min-h-screen flex flex-col items-center justify-center py-12">
-        <h1 className="text-4xl font-bold mb-6">Pricing Plans</h1>
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-3">
+    <NavBar></NavBar>
+    <div className="min-h-screen py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-base font-semibold tracking-wide text-indigo-600 uppercase">Pricing</h2>
+          <p className="mt-2 text-3xl leading-9 font-extrabold text-gray-900">Choose a Plan That Works for You</p>
+          <p className="mt-4 text-xl text-gray-500">Flexible pricing plans to meet your needs.</p>
+        </div>
+
+        <div className="mt-10 sm:mt-16 grid gap-6 lg:grid-cols-3 sm:grid-cols-1">
+          
           {/* Free Plan */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Free</h2>
-            <p className="text-gray-500 mb-6">Basic access for small needs</p>
-            <p className="text-4xl font-bold">$0</p>
-            <p className="text-gray-500 mb-6">5 inspections/month</p>
-            <ul className="text-gray-600 space-y-2">
-              <li>2 templates</li>
-              <li>Basic report generation</li>
+          <div className="max-w-sm w-full bg-white shadow-lg rounded-lg p-8">
+            <h3 className="text-lg leading-6 font-medium text-gray-900">Free</h3>
+            <p className="mt-4 text-gray-500">Perfect for individuals starting out.</p>
+            <p className="mt-6 text-4xl font-extrabold text-gray-900">$0 <span className="text-base font-medium text-gray-500">/month</span></p>
+            <ul className="mt-6 space-y-4">
+              <li className="flex items-center text-gray-500">✔ 5 inspections/month</li>
+              <li className="flex items-center text-gray-500">✔ 2 templates</li>
+              <li className="flex items-center text-gray-500">✔ Basic report generation</li>
             </ul>
-            <button className="mt-6 w-full bg-indigo-600 text-white py-2 rounded">
+            <button className="mt-8 w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-500">
               Get Started
             </button>
           </div>
 
           {/* Basic Plan */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Basic</h2>
-            <p className="text-gray-500 mb-6">For growing adjusters</p>
-            <p className="text-4xl font-bold">
-              $25<span className="text-lg">/month</span>
-            </p>
-            <p className="text-gray-500 mb-6">20 inspections/month</p>
-            <ul className="text-gray-600 space-y-2">
-              <li>5 templates</li>
-              <li>Email reports</li>
-              <li>Photo uploads</li>
+          <div className="max-w-sm w-full bg-white shadow-lg rounded-lg p-8">
+            <h3 className="text-lg leading-6 font-medium text-gray-900">Basic</h3>
+            <p className="mt-4 text-gray-500">For adjusters with regular field inspections.</p>
+            <p className="mt-6 text-4xl font-extrabold text-gray-900">$25 <span className="text-base font-medium text-gray-500">/month</span></p>
+            
+            <ul className="mt-6 space-y-4">
+              <li className="flex items-center text-gray-500">✔ 20 inspections/month</li>
+              <li className="flex items-center text-gray-500">✔ 5 templates</li>
+              <li className="flex items-center text-gray-500">✔ Photo uploads</li>
+              <li className="flex items-center text-gray-500">✔ Email reports</li>
             </ul>
-            <button className="mt-6 w-full bg-indigo-600 text-white py-2 rounded">
+            <button className="mt-8 w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-500">
               Choose Basic
             </button>
           </div>
 
           {/* Pro Plan */}
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Pro</h2>
-            <p className="text-gray-500 mb-6">For professionals</p>
-            <p className="text-4xl font-bold">
-              $50<span className="text-lg">/month</span>
-            </p>
-            <p className="text-gray-500 mb-6">Unlimited inspections</p>
-            <ul className="text-gray-600 space-y-2">
-              <li>Custom templates</li>
-              <li>Offline mode</li>
-              <li>Cloud sync</li>
+          <div className="max-w-sm w-full bg-white shadow-lg rounded-lg p-8">
+            <h3 className="text-lg leading-6 font-medium text-gray-900">Pro</h3>
+            <p className="mt-4 text-gray-500">For adjusters with higher inspection needs.</p>
+            <p className="mt-6 text-4xl font-extrabold text-gray-900">$50 <span className="text-base font-medium text-gray-500">/month</span></p>
+            <ul className="mt-6 space-y-4">
+              <li className="flex items-center text-gray-500">✔ Unlimited inspections</li>
+              <li className="flex items-center text-gray-500">✔ Custom templates</li>
+              <li className="flex items-center text-gray-500">✔ Offline access</li>
+              <li className="flex items-center text-gray-500">✔ Cloud sync</li>
             </ul>
-            <button className="mt-6 w-full bg-indigo-600 text-white py-2 rounded">
+            <button className="mt-8 w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-500">
               Choose Pro
             </button>
           </div>
+
         </div>
       </div>
-      <Footer></Footer>
+    </div>
+    <Footer></Footer>
     </div>
   );
 };

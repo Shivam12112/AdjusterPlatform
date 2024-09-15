@@ -20,7 +20,7 @@ const WhyChooseThisPlatform = () => {
           Engineered by Certified Insurance Developers for Adjuster Community
         </p>
         <div className="flex mt-6 justify-center">
-          <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+          <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ const WhyChooseThisPlatform = () => {
               Time-Saving
             </h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
-              <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
               Predefined templates reduce the time spent preparing for
@@ -52,7 +52,7 @@ const WhyChooseThisPlatform = () => {
               Accurate Documentation
             </h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
-              <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
               Structured workflows minimize the risk of errors, improving the
@@ -62,7 +62,7 @@ const WhyChooseThisPlatform = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-2">Adaptable</h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
-              <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
               Suitable for various lines of business, making it flexible for any

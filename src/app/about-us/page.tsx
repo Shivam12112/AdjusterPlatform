@@ -62,7 +62,7 @@ const page = () => {
               mi pug.
             </p>
             <div className="flex mt-6 justify-center">
-              <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
           </div>
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
@@ -187,7 +187,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          <button className="flex mx-auto mt-16 text-white bg-indigo-600 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             Button
           </button>
         </div>

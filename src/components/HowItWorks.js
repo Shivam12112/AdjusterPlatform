@@ -18,7 +18,7 @@ const HowItWorks = () => {
         Effortless Claims Processing in just a few steps.
         </p>
         <div className="flex mt-6 justify-center">
-          <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+          <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
         </div>
       </div>
 
@@ -38,7 +38,7 @@ const HowItWorks = () => {
             Create Your Account and Choose a Template
             </h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
-              <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
             Sign up for an account and either select a pre-built template or customize your own to fit the specific needs of your inspection. Templates can be reused, ensuring consistency across all inspections.
@@ -47,7 +47,7 @@ const HowItWorks = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-2">Collect Data On-Site Using the Mobile App</h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
-              <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
             Perform inspections in the field using our mobile app. Capture all required data, including photos and notes, even without an internet connection. Your inspection follows a structured workflow to ensure nothing is missed.
@@ -56,7 +56,7 @@ const HowItWorks = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-2">Sync Data and Generate Comprehensive Reports</h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
-              <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
             Once back online, sync your collected data to the cloud. The platform consolidates everything into a detailed report, including all data and photos, ready for review and sharing.
@@ -67,7 +67,7 @@ const HowItWorks = () => {
               Generate Custom Reports
             </h2>
             <div className="flex mb-2 justify-center sm:justify-start md:justify-start lg:justify-start">
-              <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-indigo-600 inline-flex"></div>
             </div>
             <p className="text-gray-700 dark:text-gray-400">
               Create comprehensive, customizable reports that meet the specific
